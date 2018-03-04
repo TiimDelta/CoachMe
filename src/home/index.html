@@ -28,15 +28,13 @@
         <a class="navbar-brand" href="index.html">CoachMe</a>
         <div>
           <button class="btn btn-primary ml-15" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Logi sisse</button>
-
-            <div id="login" class="modal">
-              
+            <div id="login" class="modal">      
               <form class="modal-content animate">
                 <div class="imgcontainer">
                   <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
                 </div>
 
-                <div class="container">
+                <div class="popupcontainer">
                   <label for="uname"><b>Username</b></label>
                   <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -76,8 +74,8 @@
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
                           <input type="search" class="form-control form-control-lg" placeholder="Otsi treenerit...">
                         </div>
-                        <div class="col-12 col-md-3">
-                          <button type="submit" class="btn btn-block btn-primary searchbtn">Otsi</button>
+                        <div class="col-12 col-md-1">
+                          <button class="btn btn-primary" type="submit">Otsi</button>
                         </div>
                       </div>
                     </form>
@@ -180,22 +178,31 @@
           <div class="col-lg-4">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
-              <h5>Margaret E.</h5>
-              <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+              <h5 class="font-weight-bold">Margaret Tamm</h5>
+              <p class="font-weight-light mb-0">Eriala: Bodypump</p>
+              <p class="font-weight-light mb-0">Asukoht: Mustamäe MyFitness</p>
+              <p class="font-weight-light mb-0">E-mail: mtamm@hotmail.com</p>
+              <button class="btn btn-primary mt-15" type="submit">Proovi trenni</button>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-2.jpg" alt="">
-              <h5>Fred S.</h5>
-              <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+              <h5 class="font-weight-bold">Fred Suvi</h5>
+              <p class="font-weight-light mb-0">Eriala: Tennis</p>
+              <p class="font-weight-light mb-0">Asukoht: Laagri tennisekeskus</p>
+              <p class="font-weight-light mb-0">E-mail: fsuvi@gmail.com</p>
+              <button class="btn btn-primary mt-15" type="submit">Proovi trenni</button>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-3.jpg" alt="">
-              <h5>Sarah	W.</h5>
-              <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+              <h5 class="font-weight-bold">Saara Puu</h5>
+              <p class="font-weight-light mb-0">Eriala: Ratsutamine</p>
+              <p class="font-weight-light mb-0">Asukoht: Niitvälja</p>
+              <p class="font-weight-light mb-0">E-mail: spuu@hotmail.com</p>
+              <button class="btn btn-primary mt-15" type="submit">Proovi trenni</button>
             </div>
           </div>
         </div>
@@ -252,6 +259,8 @@
     <!-- Bootstrap core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
       // Get the modal
       var modal = document.getElementById('login');

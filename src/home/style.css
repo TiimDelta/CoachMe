@@ -67,9 +67,8 @@ header.masthead h1 {
     padding: 7rem;
   }
   .carousel-caption{
-  	right: 0;
-  	bottom: 55%;
-  	left: 10%;
+  	bottom: 55% !important;
+  	left: 15% !important;
   }
   .searchbtn{
 	width: 55px;
@@ -109,7 +108,7 @@ header.masthead h1 {
 }
 
 .testimonials .testimonial-item {
-  max-width: 18rem;
+  max-width: 200px;
 }
 
 .testimonials .testimonial-item img {
@@ -153,8 +152,8 @@ footer.footer {
   margin-bottom: 0px;
 }
 .navbar-brand{
-  font-size: 26px;
-  line-height: 13px;
+  font-size: 20px !important;
+  line-height: 14px !important;
   font-weight: 900;
   font-style: italic;
   border: 3px solid rgb(54, 57, 62);
@@ -163,6 +162,9 @@ footer.footer {
 }
 .ml-15{
   margin-right: 15px;
+}
+.mt-15{
+  margin-top: 15px;
 }
 .bg-light{
   background-color: rgb(216, 220, 222)!important;
@@ -175,7 +177,9 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+.font-weight-bold{
+  font-weight: bold;
+}
 /* Extra styles for the cancel button */
 .cancelbtn {
     width: auto;
@@ -190,7 +194,7 @@ input[type=text], input[type=password] {
     position: relative;
 }
 
-.container {
+.container, .popupcontainer {
     padding: 16px;
 }
 
@@ -219,7 +223,7 @@ span.psw {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 30%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -257,4 +261,7 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
+}
+.navbar{
+  margin-bottom: 0px !important;
 }
