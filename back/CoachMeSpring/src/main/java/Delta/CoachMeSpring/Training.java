@@ -14,11 +14,11 @@ import javax.persistence.Id;
 @Setter
 public class Training {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Integer Id;
-    String trainerName;
+    String trainer;
     String location;
-    String eMail;
-    String workoutType;
+    String mail;
+    String workout;
 
 }
