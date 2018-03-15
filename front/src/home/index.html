@@ -28,7 +28,7 @@
         <a class="navbar-brand" href="index.html">CoachMe</a>
         <div>
           <button class="btn btn-primary ml-15" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Logi sisse</button>
-            <div id="login" class="modal">      
+            <div id="login" class="modal">
               <form class="modal-content animate">
                 <div class="imgcontainer">
                   <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -40,7 +40,7 @@
 
                   <label for="psw"><b>Password</b></label>
                   <input type="password" placeholder="Enter Password" name="psw" required>
-                    
+
                   <button class="btn btn-primary" type="submit">Login</button>
                 </div>
               </form>
@@ -49,7 +49,7 @@
         </div>
       </div>
     </nav>
-    
+
     <!-- Masthead -->
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -209,19 +209,19 @@
       </div>
     </section>
     <div>
-      <form class="form-horizontal">
+      <form id="userform" submit.delegate="addTraining()" class="form-horizontal">
         <div>
-          <label for="treeneriNimi"><b>Treeneri nimi</b></label>
-          <input type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" required>
+          <label for="trainer"><b>Treeneri nimi</b></label>
+          <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" required>
 
-          <label><b>Trenni tüüp</b></label>
-          <input type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" required>
+					<label for="location"><b>Asukoht</b></label>
+          <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" required>
 
-          <label><b>Asukoht</b></label>
-          <input type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" required>
+          <label for="mail"><b>Trenni tüüp</b></label>
+          <input id=="mail" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" required>
 
-          <label><b>email</b></label>
-          <input type="text" placeholder="sisesta email" name="email" required>
+          <label for="workout"><b>email</b></label>
+          <input id=="workout" type="text" placeholder="sisesta email" name="email" required>
 
           <button class="btn btn-primary" type="submit">Lisa</button>
         </div>
@@ -229,7 +229,7 @@
     </div>
 
 
-    
+
 
     <!-- Footer -->
     <footer class="footer bg-light">
