@@ -2,19 +2,19 @@ import {HttpClient, json} from 'aurelia-fetch-client'
 
 export class Home{
 
+  trainingData ={ "trainer" : "",
+                  "location":"",
+                  "workout":"",
+                  "mail":""}
+
 	addTraining(){
 		let client = new HttpClient();
 
-		let trainingData = {
-      "trainer": "xxTommy",
-    	"location": "Idaxx",
-    	"mail": "axx",
-    	"workout": "Jomm"
-		}
+
 
 		client.fetch('http://localhost:8080/trainings/add', {
 			'method': "POST",
-			'body': json(trainingData)
+			'body': json(this.trainingData)
 		})
 			.then(response => response.json())
 			.then(data => {

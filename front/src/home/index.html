@@ -212,16 +212,16 @@
       <form id="userform" submit.delegate="addTraining()" class="form-horizontal">
         <div>
           <label for="trainer"><b>Treeneri nimi</b></label>
-          <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" required>
+          <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
 
 					<label for="location"><b>Asukoht</b></label>
-          <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" required>
+          <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" value.bind="trainingData.location" required>
 
-          <label for="mail"><b>Trenni tüüp</b></label>
-          <input id=="mail" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" required>
+          <label for="workout"><b>Trenni tüüp</b></label>
+          <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
 
-          <label for="workout"><b>email</b></label>
-          <input id=="workout" type="text" placeholder="sisesta email" name="email" required>
+          <label for="mail"><b>email</b></label>
+          <input id=="mail" type="text" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
 
           <button class="btn btn-primary" type="submit">Lisa</button>
         </div>
