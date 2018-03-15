@@ -1,0 +1,696 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--scripts-prepend-node-path=auto' ]
+2 info using npm@1.3.24
+3 info using node@v8.9.1
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ 'C:\\Users\\karlo\\Desktop\\Projekt\\CoachMe\\front',
+5 verbose install   [ 'aurelia-animator-css',
+5 verbose install     'aurelia-bootstrapper',
+5 verbose install     'aurelia-fetch-client',
+5 verbose install     'bluebird',
+5 verbose install     'bootstrap',
+5 verbose install     'jquery',
+5 verbose install     'popper.js',
+5 verbose install     'requirejs',
+5 verbose install     'text',
+5 verbose install     'aurelia-cli',
+5 verbose install     'aurelia-testing',
+5 verbose install     'aurelia-tools',
+5 verbose install     'gulp',
+5 verbose install     'minimatch',
+5 verbose install     'through2',
+5 verbose install     'uglify-js',
+5 verbose install     'vinyl-fs',
+5 verbose install     'babel-eslint',
+5 verbose install     'babel-plugin-syntax-flow',
+5 verbose install     'babel-plugin-transform-decorators-legacy',
+5 verbose install     'babel-plugin-transform-es2015-modules-amd',
+5 verbose install     'babel-plugin-transform-es2015-modules-commonjs',
+5 verbose install     'babel-plugin-transform-flow-strip-types',
+5 verbose install     'babel-preset-es2015',
+5 verbose install     'babel-preset-stage-1',
+5 verbose install     'babel-polyfill',
+5 verbose install     'babel-register',
+5 verbose install     'gulp-babel',
+5 verbose install     'gulp-eslint',
+5 verbose install     'jasmine-core',
+5 verbose install     'karma',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'karma-jasmine',
+5 verbose install     'karma-sourcemap-loader',
+5 verbose install     'karma-babel-preprocessor',
+5 verbose install     'browser-sync',
+5 verbose install     'connect-history-api-fallback',
+5 verbose install     'debounce',
+5 verbose install     'gulp-changed-in-place',
+5 verbose install     'gulp-plumber',
+5 verbose install     'gulp-rename',
+5 verbose install     'gulp-sourcemaps',
+5 verbose install     'gulp-notify',
+5 verbose install     'gulp-watch' ] ]
+6 info preinstall coachme@0.1.0
+7 warn package.json copy-descriptor@0.1.1 No README data
+8 warn package.json estraverse@4.2.0 No README data
+9 warn package.json get-value@2.0.6 No README data
+10 warn package.json object-copy@0.1.0 No README data
+11 warn package.json path-is-inside@1.0.2 No README data
+12 warn package.json static-extend@0.1.2 No README data
+13 warn package.json bcrypt-pbkdf@1.0.1 No repository field.
+14 warn package.json callsite@1.0.0 No repository field.
+15 warn package.json cli-usage@0.1.7 No repository field.
+16 warn package.json has-binary2@1.0.2 No repository field.
+17 warn package.json has-binary@0.1.7 No repository field.
+18 warn package.json indexof@0.0.1 No repository field.
+19 warn package.json object-component@0.0.3 No repository field.
+20 warn package.json punycode@1.4.1 punycode is also the name of a node core module.
+21 warn package.json string_decoder@1.0.3 string_decoder is also the name of a node core module.
+22 verbose readDependencies using package.json deps
+23 verbose already installed skipping karma-jasmine@^1.0.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+24 verbose already installed skipping karma-sourcemap-loader@^0.3.7 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+25 verbose already installed skipping karma-babel-preprocessor@^6.0.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+26 verbose already installed skipping browser-sync@^2.13.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+27 verbose already installed skipping connect-history-api-fallback@^1.2.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+28 verbose already installed skipping debounce@^1.0.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+29 verbose already installed skipping gulp-changed-in-place@^2.0.3 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+30 verbose already installed skipping gulp-plumber@^1.1.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+31 verbose already installed skipping gulp-rename@^1.2.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+32 verbose already installed skipping gulp-sourcemaps@^2.0.0-alpha C:\Users\karlo\Desktop\Projekt\CoachMe\front
+33 verbose already installed skipping gulp-notify@^2.2.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+34 verbose already installed skipping gulp-watch@^4.3.11 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+35 verbose already installed skipping aurelia-animator-css@^1.0.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+36 verbose already installed skipping aurelia-bootstrapper@^2.1.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+37 verbose cache add [ 'aurelia-fetch-client@^1.3.1', null ]
+38 verbose cache add name=undefined spec="aurelia-fetch-client@^1.3.1" args=["aurelia-fetch-client@^1.3.1",null]
+39 verbose parsed url Url {
+39 verbose parsed url   protocol: null,
+39 verbose parsed url   slashes: null,
+39 verbose parsed url   auth: null,
+39 verbose parsed url   host: null,
+39 verbose parsed url   port: null,
+39 verbose parsed url   hostname: null,
+39 verbose parsed url   hash: null,
+39 verbose parsed url   search: null,
+39 verbose parsed url   query: null,
+39 verbose parsed url   pathname: 'aurelia-fetch-client@%5E1.3.1',
+39 verbose parsed url   path: 'aurelia-fetch-client@%5E1.3.1',
+39 verbose parsed url   href: 'aurelia-fetch-client@%5E1.3.1' }
+40 verbose cache add name="aurelia-fetch-client" spec="^1.3.1" args=["aurelia-fetch-client","^1.3.1"]
+41 verbose parsed url Url {
+41 verbose parsed url   protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: '%5E1.3.1',
+41 verbose parsed url   path: '%5E1.3.1',
+41 verbose parsed url   href: '%5E1.3.1' }
+42 verbose addNamed [ 'aurelia-fetch-client', '^1.3.1' ]
+43 verbose addNamed [ null, '>=1.3.1-0 <2.0.0-0' ]
+44 verbose already installed skipping bluebird@^3.4.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+45 verbose already installed skipping bootstrap@~4.0.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+46 verbose already installed skipping jquery@~2.2.4 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+47 verbose already installed skipping popper.js@~1.12.9 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+48 verbose already installed skipping requirejs@^2.3.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+49 verbose cache add [ 'text@github:requirejs/text#latest', null ]
+50 verbose cache add name=undefined spec="text@github:requirejs/text#latest" args=["text@github:requirejs/text#latest",null]
+51 verbose parsed url Url {
+51 verbose parsed url   protocol: null,
+51 verbose parsed url   slashes: null,
+51 verbose parsed url   auth: null,
+51 verbose parsed url   host: null,
+51 verbose parsed url   port: null,
+51 verbose parsed url   hostname: null,
+51 verbose parsed url   hash: '#latest',
+51 verbose parsed url   search: null,
+51 verbose parsed url   query: null,
+51 verbose parsed url   pathname: 'text@github:requirejs/text',
+51 verbose parsed url   path: 'text@github:requirejs/text',
+51 verbose parsed url   href: 'text@github:requirejs/text#latest' }
+52 verbose cache add name="text" spec="github:requirejs/text#latest" args=["text","github:requirejs/text#latest"]
+53 verbose parsed url Url {
+53 verbose parsed url   protocol: 'github:',
+53 verbose parsed url   slashes: null,
+53 verbose parsed url   auth: null,
+53 verbose parsed url   host: 'requirejs',
+53 verbose parsed url   port: null,
+53 verbose parsed url   hostname: 'requirejs',
+53 verbose parsed url   hash: '#latest',
+53 verbose parsed url   search: null,
+53 verbose parsed url   query: null,
+53 verbose parsed url   pathname: '/text',
+53 verbose parsed url   path: '/text',
+53 verbose parsed url   href: 'github:requirejs/text#latest' }
+54 verbose addNamed [ 'text', 'github:requirejs/text#latest' ]
+55 verbose addNamed [ null, null ]
+56 verbose already installed skipping aurelia-cli@^0.32.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+57 verbose already installed skipping aurelia-testing@^1.0.0-beta.3.0.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+58 verbose already installed skipping aurelia-tools@^1.0.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+59 verbose cache add [ 'gulp@github:gulpjs/gulp#4.0', null ]
+60 verbose cache add name=undefined spec="gulp@github:gulpjs/gulp#4.0" args=["gulp@github:gulpjs/gulp#4.0",null]
+61 verbose parsed url Url {
+61 verbose parsed url   protocol: null,
+61 verbose parsed url   slashes: null,
+61 verbose parsed url   auth: null,
+61 verbose parsed url   host: null,
+61 verbose parsed url   port: null,
+61 verbose parsed url   hostname: null,
+61 verbose parsed url   hash: '#4.0',
+61 verbose parsed url   search: null,
+61 verbose parsed url   query: null,
+61 verbose parsed url   pathname: 'gulp@github:gulpjs/gulp',
+61 verbose parsed url   path: 'gulp@github:gulpjs/gulp',
+61 verbose parsed url   href: 'gulp@github:gulpjs/gulp#4.0' }
+62 verbose cache add name="gulp" spec="github:gulpjs/gulp#4.0" args=["gulp","github:gulpjs/gulp#4.0"]
+63 verbose parsed url Url {
+63 verbose parsed url   protocol: 'github:',
+63 verbose parsed url   slashes: null,
+63 verbose parsed url   auth: null,
+63 verbose parsed url   host: 'gulpjs',
+63 verbose parsed url   port: null,
+63 verbose parsed url   hostname: 'gulpjs',
+63 verbose parsed url   hash: '#4.0',
+63 verbose parsed url   search: null,
+63 verbose parsed url   query: null,
+63 verbose parsed url   pathname: '/gulp',
+63 verbose parsed url   path: '/gulp',
+63 verbose parsed url   href: 'github:gulpjs/gulp#4.0' }
+64 verbose addNamed [ 'gulp', 'github:gulpjs/gulp#4.0' ]
+65 verbose addNamed [ null, null ]
+66 verbose already installed skipping minimatch@^3.0.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+67 verbose already installed skipping through2@^2.0.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+68 verbose already installed skipping uglify-js@^3.0.19 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+69 verbose already installed skipping vinyl-fs@^2.4.3 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+70 verbose already installed skipping babel-eslint@^6.0.4 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+71 verbose already installed skipping babel-plugin-syntax-flow@^6.8.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+72 verbose already installed skipping babel-plugin-transform-decorators-legacy@^1.3.4 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+73 verbose already installed skipping babel-plugin-transform-es2015-modules-amd@^6.8.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+74 verbose already installed skipping babel-plugin-transform-es2015-modules-commonjs@^6.10.3 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+75 verbose already installed skipping babel-plugin-transform-flow-strip-types@^6.8.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+76 verbose already installed skipping babel-preset-es2015@^6.13.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+77 verbose already installed skipping babel-preset-stage-1@^6.5.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+78 verbose already installed skipping babel-polyfill@^6.9.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+79 verbose already installed skipping babel-register@^6.24.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+80 verbose already installed skipping gulp-babel@^6.1.2 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+81 verbose already installed skipping gulp-eslint@^2.0.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+82 silly lockFile e380f803-gulp-github-gulpjs-gulp-4-0 gulp@github:gulpjs/gulp#4.0
+83 verbose lock gulp@github:gulpjs/gulp#4.0 C:\Users\karlo\AppData\Roaming\npm-cache\e380f803-gulp-github-gulpjs-gulp-4-0.lock
+84 silly lockFile 85f5d5e6-aurelia-fetch-client-1-3-1 aurelia-fetch-client@^1.3.1
+85 verbose lock aurelia-fetch-client@^1.3.1 C:\Users\karlo\AppData\Roaming\npm-cache\85f5d5e6-aurelia-fetch-client-1-3-1.lock
+86 silly lockFile dd9711e2-ext-github-requirejs-text-latest text@github:requirejs/text#latest
+87 verbose lock text@github:requirejs/text#latest C:\Users\karlo\AppData\Roaming\npm-cache\dd9711e2-ext-github-requirejs-text-latest.lock
+88 verbose already installed skipping jasmine-core@^2.4.1 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+89 verbose already installed skipping karma@^0.13.22 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+90 verbose already installed skipping karma-chrome-launcher@^2.2.0 C:\Users\karlo\Desktop\Projekt\CoachMe\front
+91 info addNameTag [ 'text', 'github:requirejs/text#latest' ]
+92 info addNameTag [ 'gulp', 'github:gulpjs/gulp#4.0' ]
+93 silly addNameRange { name: 'aurelia-fetch-client',
+93 silly addNameRange   range: '>=1.3.1-0 <2.0.0-0',
+93 silly addNameRange   hasData: false }
+94 verbose url raw aurelia-fetch-client
+95 verbose url resolving [ 'https://registry.npmjs.org/', './aurelia-fetch-client' ]
+96 verbose url resolved https://registry.npmjs.org/aurelia-fetch-client
+97 info trying registry request attempt 1 at 15:56:59
+98 http GET https://registry.npmjs.org/aurelia-fetch-client
+99 verbose url raw text
+100 verbose url resolving [ 'https://registry.npmjs.org/', './text' ]
+101 verbose url resolved https://registry.npmjs.org/text
+102 info trying registry request attempt 1 at 15:56:59
+103 verbose etag "4ac2421d-38e"
+104 http GET https://registry.npmjs.org/text
+105 verbose url raw gulp
+106 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+107 verbose url resolved https://registry.npmjs.org/gulp
+108 info trying registry request attempt 1 at 15:56:59
+109 verbose etag "5a9858e0-1e229"
+110 http GET https://registry.npmjs.org/gulp
+111 http 200 https://registry.npmjs.org/gulp
+112 silly registry.get cb [ 200,
+112 silly registry.get   { 'content-type': 'application/json; charset=UTF-8',
+112 silly registry.get     server: 'UploadServer',
+112 silly registry.get     'cache-control': 'max-age=300',
+112 silly registry.get     'last-modified': 'Thu, 15 Mar 2018 4:45:22 GMT',
+112 silly registry.get     etag: '"5aa9fa62-1e249"',
+112 silly registry.get     'x-npm-region': 'EU-East',
+112 silly registry.get     'content-length': '123465',
+112 silly registry.get     'accept-ranges': 'bytes',
+112 silly registry.get     date: 'Thu, 15 Mar 2018 13:56:58 GMT',
+112 silly registry.get     via: '1.1 varnish',
+112 silly registry.get     age: '4395',
+112 silly registry.get     connection: 'close',
+112 silly registry.get     'x-served-by': 'cache-bma7027-BMA',
+112 silly registry.get     'x-cache': 'HIT',
+112 silly registry.get     'x-cache-hits': '1',
+112 silly registry.get     'x-timer': 'S1521122219.727316,VS0,VE3',
+112 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+113 info maybeGithub Attempting github:gulpjs/gulp#4.0 from git://github.com/github:gulpjs/gulp#4.0
+114 silly lockFile 649ae0b0-ithub-com-github-gulpjs-gulp-4-0 git://github.com/github:gulpjs/gulp#4.0
+115 verbose lock git://github.com/github:gulpjs/gulp#4.0 C:\Users\karlo\AppData\Roaming\npm-cache\649ae0b0-ithub-com-github-gulpjs-gulp-4-0.lock
+116 verbose addRemoteGit [ 'git://github.com/github:gulpjs/gulp', '4.0' ]
+117 warn `git config --get remote.origin.url` returned wrong result (git://github.com/github:gulpjs/gulp)
+118 http 304 https://registry.npmjs.org/text
+119 silly registry.get cb [ 304,
+119 silly registry.get   { date: 'Thu, 15 Mar 2018 13:56:58 GMT',
+119 silly registry.get     via: '1.1 varnish',
+119 silly registry.get     'cache-control': 'max-age=300',
+119 silly registry.get     etag: '"4ac2421d-38e"',
+119 silly registry.get     age: '0',
+119 silly registry.get     connection: 'close',
+119 silly registry.get     'x-served-by': 'cache-bma7028-BMA',
+119 silly registry.get     'x-cache': 'MISS',
+119 silly registry.get     'x-cache-hits': '0',
+119 silly registry.get     'x-timer': 'S1521122219.720972,VS0,VE170',
+119 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+120 verbose etag text from cache
+121 info maybeGithub Attempting github:requirejs/text#latest from git://github.com/github:requirejs/text#latest
+122 silly lockFile 28e1b78c-com-github-requirejs-text-latest git://github.com/github:requirejs/text#latest
+123 verbose lock git://github.com/github:requirejs/text#latest C:\Users\karlo\AppData\Roaming\npm-cache\28e1b78c-com-github-requirejs-text-latest.lock
+124 http 200 https://registry.npmjs.org/aurelia-fetch-client
+125 silly registry.get cb [ 200,
+125 silly registry.get   { 'content-type': 'application/json; charset=UTF-8',
+125 silly registry.get     server: 'UploadServer',
+125 silly registry.get     'cache-control': 'max-age=300',
+125 silly registry.get     'last-modified': 'Tue, 30 Jan 2018 7:11:02 GMT',
+125 silly registry.get     etag: '"5a701a86-11044"',
+125 silly registry.get     'x-npm-region': 'EU-East',
+125 silly registry.get     'content-length': '69700',
+125 silly registry.get     'accept-ranges': 'bytes',
+125 silly registry.get     date: 'Thu, 15 Mar 2018 13:56:59 GMT',
+125 silly registry.get     via: '1.1 varnish',
+125 silly registry.get     age: '0',
+125 silly registry.get     connection: 'close',
+125 silly registry.get     'x-served-by': 'cache-bma7020-BMA',
+125 silly registry.get     'x-cache': 'MISS',
+125 silly registry.get     'x-cache-hits': '0',
+125 silly registry.get     'x-timer': 'S1521122219.715341,VS0,VE301',
+125 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+126 verbose addRemoteGit [ 'git://github.com/github:requirejs/text', 'latest' ]
+127 silly addNameRange number 2 { name: 'aurelia-fetch-client',
+127 silly addNameRange   range: '>=1.3.1-0 <2.0.0-0',
+127 silly addNameRange   hasData: true }
+128 silly addNameRange versions [ 'aurelia-fetch-client',
+128 silly addNameRange   [ '1.0.0-beta.1',
+128 silly addNameRange     '1.0.0-beta.1.0.1',
+128 silly addNameRange     '1.0.0-beta.1.0.2',
+128 silly addNameRange     '1.0.0-beta.1.1.0',
+128 silly addNameRange     '1.0.0-beta.1.1.1',
+128 silly addNameRange     '1.0.0-beta.1.2.0',
+128 silly addNameRange     '1.0.0-beta.1.2.1',
+128 silly addNameRange     '1.0.0-beta.1.2.3',
+128 silly addNameRange     '1.0.0-beta.1.2.4',
+128 silly addNameRange     '1.0.0-beta.1.2.5',
+128 silly addNameRange     '1.0.0-beta.2.0.0',
+128 silly addNameRange     '1.0.0-beta.2.0.1',
+128 silly addNameRange     '1.0.0-rc.1.0.0',
+128 silly addNameRange     '1.0.0-rc.1.0.1',
+128 silly addNameRange     '1.0.0',
+128 silly addNameRange     '1.0.1',
+128 silly addNameRange     '1.1.0',
+128 silly addNameRange     '1.1.1',
+128 silly addNameRange     '1.1.2',
+128 silly addNameRange     '1.1.3',
+128 silly addNameRange     '1.2.0',
+128 silly addNameRange     '1.3.0',
+128 silly addNameRange     '1.3.1' ] ]
+129 verbose addNamed [ 'aurelia-fetch-client', '1.3.1' ]
+130 verbose addNamed [ '1.3.1', '1.3.1' ]
+131 silly lockFile 2d384b41-aurelia-fetch-client-1-3-1 aurelia-fetch-client@1.3.1
+132 verbose lock aurelia-fetch-client@1.3.1 C:\Users\karlo\AppData\Roaming\npm-cache\2d384b41-aurelia-fetch-client-1-3-1.lock
+133 silly lockFile f49b6689-t-aurelia-fetch-client-1-3-1-tgz https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz
+134 verbose lock https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz C:\Users\karlo\AppData\Roaming\npm-cache\f49b6689-t-aurelia-fetch-client-1-3-1-tgz.lock
+135 verbose addRemoteTarball [ 'https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz',
+135 verbose addRemoteTarball   '95af3c0ef0c434e92160d4882c088c7943bf2411' ]
+136 info retry fetch attempt 1 at 15:56:59
+137 verbose fetch to= C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\tmp.tgz
+138 http GET https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz
+139 warn `git config --get remote.origin.url` returned wrong result (git://github.com/github:requirejs/text)
+140 http 200 https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz
+141 verbose tar unpack C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\tmp.tgz
+142 silly lockFile 755c545e-9620-0-13040399183729146-package tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+143 verbose lock tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package C:\Users\karlo\AppData\Roaming\npm-cache\755c545e-9620-0-13040399183729146-package.lock
+144 silly lockFile 460c61a7-9620-0-13040399183729146-tmp-tgz tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\tmp.tgz
+145 verbose lock tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\tmp.tgz C:\Users\karlo\AppData\Roaming\npm-cache\460c61a7-9620-0-13040399183729146-tmp-tgz.lock
+146 silly gunzTarPerm modes [ '755', '644' ]
+147 silly gunzTarPerm extractEntry package.json
+148 silly gunzTarPerm extractEntry .npmignore
+149 silly gunzTarPerm extractEntry README.md
+150 silly gunzTarPerm extractEntry LICENSE
+151 silly gunzTarPerm extractEntry config.js
+152 silly gunzTarPerm extractEntry gulpfile.js
+153 silly gunzTarPerm extractEntry karma.conf.js
+154 silly gunzTarPerm extractEntry .eslintrc.json
+155 silly gunzTarPerm extractEntry bower.json
+156 silly gunzTarPerm extractEntry build/args.js
+157 silly gunzTarPerm extractEntry build/babel-options.js
+158 silly gunzTarPerm extractEntry build/paths.js
+159 silly gunzTarPerm extractEntry build/typescript-options.js
+160 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/prettify.js
+161 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/sorter.js
+162 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/base.css
+163 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/index.html
+164 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/prettify.css
+165 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/sort-arrow-sprite.png
+166 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/headers.js.html
+167 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-client.js.html
+168 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-request-message.js.html
+169 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-response-message.js.html
+170 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/index.html
+171 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/index.js.html
+172 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/jsonp-request-message.js.html
+173 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/request-builder.js.html
+174 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/request-message-processor.js.html
+175 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/transformers.js.html
+176 silly gunzTarPerm extractEntry build/reports/coverage/html/prettify.js
+177 silly gunzTarPerm extractEntry build/reports/coverage/html/sorter.js
+178 silly gunzTarPerm extractEntry build/reports/coverage/html/base.css
+179 silly gunzTarPerm extractEntry build/reports/coverage/html/index.html
+180 silly gunzTarPerm extractEntry build/reports/coverage/html/prettify.css
+181 silly gunzTarPerm extractEntry build/reports/coverage/html/sort-arrow-sprite.png
+182 silly gunzTarPerm extractEntry build/reports/coverage/html/src/http-client-configuration.js.html
+183 silly gunzTarPerm extractEntry build/reports/coverage/html/src/http-client.js.html
+184 silly gunzTarPerm extractEntry build/reports/coverage/html/src/index.html
+185 silly gunzTarPerm extractEntry build/reports/coverage/html/src/util.js.html
+186 silly gunzTarPerm extractEntry build/reports/coverage/lcov/report-lcovonly.txt
+187 silly gunzTarPerm extractEntry build/tasks/build.js
+188 silly gunzTarPerm extractEntry build/tasks/ci.js
+189 silly gunzTarPerm extractEntry build/tasks/clean.js
+190 silly gunzTarPerm extractEntry build/tasks/default.js
+191 silly gunzTarPerm extractEntry build/tasks/dev.js
+192 silly gunzTarPerm extractEntry build/tasks/doc.js
+193 silly gunzTarPerm extractEntry build/tasks/lint.js
+194 silly gunzTarPerm extractEntry build/tasks/prepare-release.js
+195 silly gunzTarPerm extractEntry build/tasks/test.js
+196 silly gunzTarPerm extractEntry circle.yml
+197 silly gunzTarPerm extractEntry .editorconfig
+198 silly gunzTarPerm extractEntry dist/aurelia-fetch-client.js
+199 silly gunzTarPerm extractEntry dist/amd/aurelia-fetch-client.js
+200 silly gunzTarPerm extractEntry dist/amd/index.js
+201 silly gunzTarPerm extractEntry dist/aurelia-fetch-client.d.ts
+202 silly gunzTarPerm extractEntry dist/commonjs/aurelia-fetch-client.js
+203 silly gunzTarPerm extractEntry dist/commonjs/index.js
+204 silly gunzTarPerm extractEntry dist/es2015/aurelia-fetch-client.js
+205 silly gunzTarPerm extractEntry dist/es2015/index.js
+206 silly gunzTarPerm extractEntry dist/index.d.ts
+207 silly gunzTarPerm extractEntry dist/native-modules/aurelia-fetch-client.js
+208 silly gunzTarPerm extractEntry dist/native-modules/index.js
+209 silly gunzTarPerm extractEntry dist/system/aurelia-fetch-client.js
+210 silly gunzTarPerm extractEntry dist/system/index.js
+211 silly gunzTarPerm extractEntry doc/CHANGELOG.md
+212 silly gunzTarPerm extractEntry doc/api.json
+213 silly gunzTarPerm extractEntry doc/article/en-US/http-services.md
+214 silly gunzTarPerm extractEntry doc/dom.d.ts
+215 silly gunzTarPerm extractEntry doc/url.d.ts
+216 silly gunzTarPerm extractEntry doc/whatwg-fetch.d.ts
+217 silly gunzTarPerm extractEntry CONTRIBUTING.md
+218 silly gunzTarPerm extractEntry tsconfig.json
+219 silly gunzTarPerm extractEntry ISSUE_TEMPLATE.md
+220 silly gunzTarPerm extractEntry src/http-client-configuration.js
+221 silly gunzTarPerm extractEntry src/http-client.js
+222 silly gunzTarPerm extractEntry src/interfaces.js
+223 silly gunzTarPerm extractEntry src/util.js
+224 silly gunzTarPerm extractEntry test/http-client.spec.js
+225 silly gunzTarPerm extractEntry test/util.spec.js
+226 silly gunzTarPerm extractEntry typings.json
+227 verbose git clone git://github.com/github:gulpjs/gulp Cloning into bare repository 'C:\Users\karlo\AppData\Roaming\npm-cache\_git-remotes\git-github-com-github-gulpjs-gulp-57b6f9cc'...
+227 verbose git clone git://github.com/github:gulpjs/gulp fatal: remote error:
+227 verbose git clone git://github.com/github:gulpjs/gulp   github:gulpjs/gulp is not a valid repository name
+227 verbose git clone git://github.com/github:gulpjs/gulp   Email support@github.com for help
+228 silly lockFile 57b6f9cc-it-github-com-github-gulpjs-gulp git://github.com/github:gulpjs/gulp
+229 info maybeGithub Attempting github:gulpjs/gulp#4.0 from git+ssh://git@github.com:github:gulpjs/gulp#4.0
+230 silly lockFile 85592b80-ithub-com-github-gulpjs-gulp-4-0 git+ssh://git@github.com:github:gulpjs/gulp#4.0
+231 verbose lock git+ssh://git@github.com:github:gulpjs/gulp#4.0 C:\Users\karlo\AppData\Roaming\npm-cache\85592b80-ithub-com-github-gulpjs-gulp-4-0.lock
+232 verbose git clone git://github.com/github:requirejs/text Cloning into bare repository 'C:\Users\karlo\AppData\Roaming\npm-cache\_git-remotes\git-github-com-github-requirejs-text-117253ac'...
+232 verbose git clone git://github.com/github:requirejs/text fatal: remote error:
+232 verbose git clone git://github.com/github:requirejs/text   github:requirejs/text is not a valid repository name
+232 verbose git clone git://github.com/github:requirejs/text   Email support@github.com for help
+233 silly lockFile 117253ac-github-com-github-requirejs-text git://github.com/github:requirejs/text
+234 info maybeGithub Attempting github:requirejs/text#latest from git+ssh://git@github.com:github:requirejs/text#latest
+235 silly lockFile bbeafe7c-com-github-requirejs-text-latest git+ssh://git@github.com:github:requirejs/text#latest
+236 verbose lock git+ssh://git@github.com:github:requirejs/text#latest C:\Users\karlo\AppData\Roaming\npm-cache\bbeafe7c-com-github-requirejs-text-latest.lock
+237 verbose addRemoteGit [ 'git@github.com:github:gulpjs/gulp', '4.0' ]
+238 verbose addRemoteGit [ 'git@github.com:github:requirejs/text', 'latest' ]
+239 silly lockFile 755c545e-9620-0-13040399183729146-package tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+240 silly lockFile 755c545e-9620-0-13040399183729146-package tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+241 silly lockFile 460c61a7-9620-0-13040399183729146-tmp-tgz tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\tmp.tgz
+242 silly lockFile 460c61a7-9620-0-13040399183729146-tmp-tgz tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\tmp.tgz
+243 verbose tar pack [ 'C:\\Users\\karlo\\AppData\\Roaming\\npm-cache\\aurelia-fetch-client\\1.3.1\\package.tgz',
+243 verbose tar pack   'C:\\Users\\karlo\\AppData\\Local\\Temp\\npm-2100-MtLhEd5G\\1521122219620-0.13040399183729146\\package' ]
+244 verbose tarball C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+245 verbose folder C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+246 silly lockFile 755c545e-9620-0-13040399183729146-package tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+247 verbose lock tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package C:\Users\karlo\AppData\Roaming\npm-cache\755c545e-9620-0-13040399183729146-package.lock
+248 silly lockFile 95791789-a-fetch-client-1-3-1-package-tgz tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+249 verbose lock tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz C:\Users\karlo\AppData\Roaming\npm-cache\95791789-a-fetch-client-1-3-1-package-tgz.lock
+250 warn `git config --get remote.origin.url` returned wrong result (git@github.com:github:gulpjs/gulp)
+251 warn `git config --get remote.origin.url` returned wrong result (git@github.com:github:requirejs/text)
+252 silly lockFile 755c545e-9620-0-13040399183729146-package tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+253 silly lockFile 755c545e-9620-0-13040399183729146-package tar://C:\Users\karlo\AppData\Local\Temp\npm-2100-MtLhEd5G\1521122219620-0.13040399183729146\package
+254 silly lockFile 95791789-a-fetch-client-1-3-1-package-tgz tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+255 silly lockFile 95791789-a-fetch-client-1-3-1-package-tgz tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+256 silly lockFile bb45f97a-relia-fetch-client-1-3-1-package C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package
+257 verbose lock C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package C:\Users\karlo\AppData\Roaming\npm-cache\bb45f97a-relia-fetch-client-1-3-1-package.lock
+258 silly lockFile bb45f97a-relia-fetch-client-1-3-1-package C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package
+259 silly lockFile bb45f97a-relia-fetch-client-1-3-1-package C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package
+260 verbose tar unpack C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+261 silly lockFile 42b9d7f3-relia-fetch-client-1-3-1-package tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package
+262 verbose lock tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package C:\Users\karlo\AppData\Roaming\npm-cache\42b9d7f3-relia-fetch-client-1-3-1-package.lock
+263 silly lockFile 95791789-a-fetch-client-1-3-1-package-tgz tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+264 verbose lock tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz C:\Users\karlo\AppData\Roaming\npm-cache\95791789-a-fetch-client-1-3-1-package-tgz.lock
+265 silly gunzTarPerm modes [ '755', '644' ]
+266 silly gunzTarPerm extractEntry package.json
+267 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+268 silly gunzTarPerm extractEntry .npmignore
+269 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+270 silly gunzTarPerm extractEntry README.md
+271 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+272 silly gunzTarPerm extractEntry LICENSE
+273 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+274 silly gunzTarPerm extractEntry gulpfile.js
+275 silly gunzTarPerm modified mode [ 'gulpfile.js', 438, 420 ]
+276 silly gunzTarPerm extractEntry config.js
+277 silly gunzTarPerm modified mode [ 'config.js', 438, 420 ]
+278 silly gunzTarPerm extractEntry karma.conf.js
+279 silly gunzTarPerm modified mode [ 'karma.conf.js', 438, 420 ]
+280 silly gunzTarPerm extractEntry CONTRIBUTING.md
+281 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 438, 420 ]
+282 silly gunzTarPerm extractEntry dist/aurelia-fetch-client.js
+283 silly gunzTarPerm modified mode [ 'dist/aurelia-fetch-client.js', 438, 420 ]
+284 silly gunzTarPerm extractEntry dist/amd/aurelia-fetch-client.js
+285 silly gunzTarPerm modified mode [ 'dist/amd/aurelia-fetch-client.js', 438, 420 ]
+286 silly gunzTarPerm extractEntry dist/amd/index.js
+287 silly gunzTarPerm modified mode [ 'dist/amd/index.js', 438, 420 ]
+288 silly gunzTarPerm extractEntry dist/aurelia-fetch-client.d.ts
+289 silly gunzTarPerm modified mode [ 'dist/aurelia-fetch-client.d.ts', 438, 420 ]
+290 silly gunzTarPerm extractEntry dist/commonjs/aurelia-fetch-client.js
+291 silly gunzTarPerm modified mode [ 'dist/commonjs/aurelia-fetch-client.js', 438, 420 ]
+292 silly gunzTarPerm extractEntry dist/commonjs/index.js
+293 silly gunzTarPerm modified mode [ 'dist/commonjs/index.js', 438, 420 ]
+294 silly gunzTarPerm extractEntry dist/es2015/aurelia-fetch-client.js
+295 silly gunzTarPerm modified mode [ 'dist/es2015/aurelia-fetch-client.js', 438, 420 ]
+296 silly gunzTarPerm extractEntry dist/es2015/index.js
+297 silly gunzTarPerm modified mode [ 'dist/es2015/index.js', 438, 420 ]
+298 silly gunzTarPerm extractEntry dist/index.d.ts
+299 silly gunzTarPerm modified mode [ 'dist/index.d.ts', 438, 420 ]
+300 silly gunzTarPerm extractEntry dist/native-modules/aurelia-fetch-client.js
+301 silly gunzTarPerm modified mode [ 'dist/native-modules/aurelia-fetch-client.js', 438, 420 ]
+302 silly gunzTarPerm extractEntry dist/native-modules/index.js
+303 silly gunzTarPerm modified mode [ 'dist/native-modules/index.js', 438, 420 ]
+304 silly gunzTarPerm extractEntry dist/system/aurelia-fetch-client.js
+305 silly gunzTarPerm modified mode [ 'dist/system/aurelia-fetch-client.js', 438, 420 ]
+306 silly gunzTarPerm extractEntry dist/system/index.js
+307 silly gunzTarPerm modified mode [ 'dist/system/index.js', 438, 420 ]
+308 silly gunzTarPerm extractEntry doc/api.json
+309 silly gunzTarPerm modified mode [ 'doc/api.json', 438, 420 ]
+310 silly gunzTarPerm extractEntry doc/article/en-US/http-services.md
+311 silly gunzTarPerm modified mode [ 'doc/article/en-US/http-services.md', 438, 420 ]
+312 silly gunzTarPerm extractEntry doc/CHANGELOG.md
+313 silly gunzTarPerm modified mode [ 'doc/CHANGELOG.md', 438, 420 ]
+314 silly gunzTarPerm extractEntry doc/dom.d.ts
+315 silly gunzTarPerm modified mode [ 'doc/dom.d.ts', 438, 420 ]
+316 silly gunzTarPerm extractEntry doc/url.d.ts
+317 silly gunzTarPerm modified mode [ 'doc/url.d.ts', 438, 420 ]
+318 silly gunzTarPerm extractEntry doc/whatwg-fetch.d.ts
+319 silly gunzTarPerm modified mode [ 'doc/whatwg-fetch.d.ts', 438, 420 ]
+320 silly gunzTarPerm extractEntry .eslintrc.json
+321 silly gunzTarPerm modified mode [ '.eslintrc.json', 438, 420 ]
+322 silly gunzTarPerm extractEntry ISSUE_TEMPLATE.md
+323 silly gunzTarPerm modified mode [ 'ISSUE_TEMPLATE.md', 438, 420 ]
+324 silly gunzTarPerm extractEntry bower.json
+325 silly gunzTarPerm modified mode [ 'bower.json', 438, 420 ]
+326 silly gunzTarPerm extractEntry build/args.js
+327 silly gunzTarPerm modified mode [ 'build/args.js', 438, 420 ]
+328 silly gunzTarPerm extractEntry build/babel-options.js
+329 silly gunzTarPerm modified mode [ 'build/babel-options.js', 438, 420 ]
+330 silly gunzTarPerm extractEntry build/paths.js
+331 silly gunzTarPerm modified mode [ 'build/paths.js', 438, 420 ]
+332 silly gunzTarPerm extractEntry build/typescript-options.js
+333 silly gunzTarPerm modified mode [ 'build/typescript-options.js', 438, 420 ]
+334 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/prettify.js
+335 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/prettify.js',
+335 silly gunzTarPerm   438,
+335 silly gunzTarPerm   420 ]
+336 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/sorter.js
+337 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/sorter.js',
+337 silly gunzTarPerm   438,
+337 silly gunzTarPerm   420 ]
+338 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/base.css
+339 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/base.css',
+339 silly gunzTarPerm   438,
+339 silly gunzTarPerm   420 ]
+340 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/index.html
+341 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/index.html',
+341 silly gunzTarPerm   438,
+341 silly gunzTarPerm   420 ]
+342 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/prettify.css
+343 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/prettify.css',
+343 silly gunzTarPerm   438,
+343 silly gunzTarPerm   420 ]
+344 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/sort-arrow-sprite.png
+345 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/sort-arrow-sprite.png',
+345 silly gunzTarPerm   438,
+345 silly gunzTarPerm   420 ]
+346 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/headers.js.html
+347 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/headers.js.html',
+347 silly gunzTarPerm   438,
+347 silly gunzTarPerm   420 ]
+348 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-client.js.html
+349 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-client.js.html',
+349 silly gunzTarPerm   438,
+349 silly gunzTarPerm   420 ]
+350 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-request-message.js.html
+351 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-request-message.js.html',
+351 silly gunzTarPerm   438,
+351 silly gunzTarPerm   420 ]
+352 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-response-message.js.html
+353 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/http-response-message.js.html',
+353 silly gunzTarPerm   438,
+353 silly gunzTarPerm   420 ]
+354 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/index.html
+355 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/index.html',
+355 silly gunzTarPerm   438,
+355 silly gunzTarPerm   420 ]
+356 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/index.js.html
+357 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/index.js.html',
+357 silly gunzTarPerm   438,
+357 silly gunzTarPerm   420 ]
+358 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/jsonp-request-message.js.html
+359 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/jsonp-request-message.js.html',
+359 silly gunzTarPerm   438,
+359 silly gunzTarPerm   420 ]
+360 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/request-builder.js.html
+361 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/request-builder.js.html',
+361 silly gunzTarPerm   438,
+361 silly gunzTarPerm   420 ]
+362 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/request-message-processor.js.html
+363 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/request-message-processor.js.html',
+363 silly gunzTarPerm   438,
+363 silly gunzTarPerm   420 ]
+364 silly gunzTarPerm extractEntry build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/transformers.js.html
+365 silly gunzTarPerm modified mode [ 'build/reports/coverage/Chrome 43.0.2357 (Mac OS X 10.10.3)/src/transformers.js.html',
+365 silly gunzTarPerm   438,
+365 silly gunzTarPerm   420 ]
+366 silly gunzTarPerm extractEntry build/reports/coverage/html/prettify.js
+367 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/prettify.js', 438, 420 ]
+368 silly gunzTarPerm extractEntry build/reports/coverage/html/sorter.js
+369 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/sorter.js', 438, 420 ]
+370 silly gunzTarPerm extractEntry build/reports/coverage/html/base.css
+371 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/base.css', 438, 420 ]
+372 silly gunzTarPerm extractEntry build/reports/coverage/html/index.html
+373 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/index.html', 438, 420 ]
+374 silly gunzTarPerm extractEntry build/reports/coverage/html/prettify.css
+375 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/prettify.css', 438, 420 ]
+376 silly gunzTarPerm extractEntry build/reports/coverage/html/sort-arrow-sprite.png
+377 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/sort-arrow-sprite.png', 438, 420 ]
+378 silly gunzTarPerm extractEntry build/reports/coverage/html/src/http-client-configuration.js.html
+379 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/src/http-client-configuration.js.html',
+379 silly gunzTarPerm   438,
+379 silly gunzTarPerm   420 ]
+380 silly gunzTarPerm extractEntry build/reports/coverage/html/src/http-client.js.html
+381 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/src/http-client.js.html',
+381 silly gunzTarPerm   438,
+381 silly gunzTarPerm   420 ]
+382 silly gunzTarPerm extractEntry build/reports/coverage/html/src/index.html
+383 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/src/index.html', 438, 420 ]
+384 silly gunzTarPerm extractEntry build/reports/coverage/html/src/util.js.html
+385 silly gunzTarPerm modified mode [ 'build/reports/coverage/html/src/util.js.html', 438, 420 ]
+386 silly gunzTarPerm extractEntry build/reports/coverage/lcov/report-lcovonly.txt
+387 silly gunzTarPerm modified mode [ 'build/reports/coverage/lcov/report-lcovonly.txt', 438, 420 ]
+388 silly gunzTarPerm extractEntry build/tasks/build.js
+389 silly gunzTarPerm modified mode [ 'build/tasks/build.js', 438, 420 ]
+390 silly gunzTarPerm extractEntry build/tasks/ci.js
+391 silly gunzTarPerm modified mode [ 'build/tasks/ci.js', 438, 420 ]
+392 silly gunzTarPerm extractEntry build/tasks/clean.js
+393 silly gunzTarPerm modified mode [ 'build/tasks/clean.js', 438, 420 ]
+394 silly gunzTarPerm extractEntry build/tasks/default.js
+395 silly gunzTarPerm modified mode [ 'build/tasks/default.js', 438, 420 ]
+396 silly gunzTarPerm extractEntry build/tasks/dev.js
+397 silly gunzTarPerm modified mode [ 'build/tasks/dev.js', 438, 420 ]
+398 silly gunzTarPerm extractEntry build/tasks/doc.js
+399 silly gunzTarPerm modified mode [ 'build/tasks/doc.js', 438, 420 ]
+400 silly gunzTarPerm extractEntry build/tasks/lint.js
+401 silly gunzTarPerm modified mode [ 'build/tasks/lint.js', 438, 420 ]
+402 silly gunzTarPerm extractEntry build/tasks/prepare-release.js
+403 silly gunzTarPerm modified mode [ 'build/tasks/prepare-release.js', 438, 420 ]
+404 silly gunzTarPerm extractEntry build/tasks/test.js
+405 silly gunzTarPerm modified mode [ 'build/tasks/test.js', 438, 420 ]
+406 silly gunzTarPerm extractEntry circle.yml
+407 silly gunzTarPerm modified mode [ 'circle.yml', 438, 420 ]
+408 silly gunzTarPerm extractEntry .editorconfig
+409 silly gunzTarPerm modified mode [ '.editorconfig', 438, 420 ]
+410 silly gunzTarPerm extractEntry src/http-client-configuration.js
+411 silly gunzTarPerm modified mode [ 'src/http-client-configuration.js', 438, 420 ]
+412 silly gunzTarPerm extractEntry src/http-client.js
+413 silly gunzTarPerm modified mode [ 'src/http-client.js', 438, 420 ]
+414 silly gunzTarPerm extractEntry src/interfaces.js
+415 silly gunzTarPerm modified mode [ 'src/interfaces.js', 438, 420 ]
+416 silly gunzTarPerm extractEntry src/util.js
+417 silly gunzTarPerm modified mode [ 'src/util.js', 438, 420 ]
+418 silly gunzTarPerm extractEntry test/http-client.spec.js
+419 silly gunzTarPerm modified mode [ 'test/http-client.spec.js', 438, 420 ]
+420 silly gunzTarPerm extractEntry test/util.spec.js
+421 silly gunzTarPerm modified mode [ 'test/util.spec.js', 438, 420 ]
+422 silly gunzTarPerm extractEntry tsconfig.json
+423 silly gunzTarPerm modified mode [ 'tsconfig.json', 438, 420 ]
+424 silly gunzTarPerm extractEntry typings.json
+425 silly gunzTarPerm modified mode [ 'typings.json', 438, 420 ]
+426 silly lockFile 42b9d7f3-relia-fetch-client-1-3-1-package tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package
+427 silly lockFile 42b9d7f3-relia-fetch-client-1-3-1-package tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package
+428 silly lockFile 95791789-a-fetch-client-1-3-1-package-tgz tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+429 silly lockFile 95791789-a-fetch-client-1-3-1-package-tgz tar://C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+430 verbose chmod C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz 644
+431 silly chown skipping for windows C:\Users\karlo\AppData\Roaming\npm-cache\aurelia-fetch-client\1.3.1\package.tgz
+432 silly lockFile f49b6689-t-aurelia-fetch-client-1-3-1-tgz https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz
+433 silly lockFile f49b6689-t-aurelia-fetch-client-1-3-1-tgz https://registry.npmjs.org/aurelia-fetch-client/-/aurelia-fetch-client-1.3.1.tgz
+434 silly lockFile 2d384b41-aurelia-fetch-client-1-3-1 aurelia-fetch-client@1.3.1
+435 silly lockFile 2d384b41-aurelia-fetch-client-1-3-1 aurelia-fetch-client@1.3.1
+436 silly lockFile 85f5d5e6-aurelia-fetch-client-1-3-1 aurelia-fetch-client@^1.3.1
+437 silly lockFile 85f5d5e6-aurelia-fetch-client-1-3-1 aurelia-fetch-client@^1.3.1
+438 verbose git clone git@github.com:github:gulpjs/gulp Cloning into bare repository 'C:\Users\karlo\AppData\Roaming\npm-cache\_git-remotes\git-github-com-github-gulpjs-gulp-e2adb3d8'...
+438 verbose git clone git@github.com:github:gulpjs/gulp Host key verification failed.
+438 verbose git clone git@github.com:github:gulpjs/gulp fatal: Could not read from remote repository.
+438 verbose git clone git@github.com:github:gulpjs/gulp
+438 verbose git clone git@github.com:github:gulpjs/gulp Please make sure you have the correct access rights
+438 verbose git clone git@github.com:github:gulpjs/gulp and the repository exists.
+439 silly lockFile e2adb3d8-it-github-com-github-gulpjs-gulp git@github.com:github:gulpjs/gulp
+440 silly lockFile e380f803-gulp-github-gulpjs-gulp-4-0 gulp@github:gulpjs/gulp#4.0
+441 silly lockFile e380f803-gulp-github-gulpjs-gulp-4-0 gulp@github:gulpjs/gulp#4.0
+442 error notarget No compatible version found: gulp@'github:gulpjs/gulp#4.0'
+442 error notarget Valid install targets:
+442 error notarget ["0.0.1","0.0.2","0.0.3","0.0.4","0.0.5","0.0.7","0.0.8","0.0.9","0.1.0","0.2.0","1.0.0","1.1.0","1.2.0","1.2.1","2.0.0","2.0.1","2.1.0","2.2.0","2.3.0","2.4.0","2.4.1","2.6.0","2.6.1","2.7.0","3.0.0","3.1.1","3.1.2","3.1.3","3.1.4","3.2.0","3.2.1","3.2.2","3.2.3","3.2.4","3.2.5","3.3.0","3.3.1","3.3.2","3.3.4","3.4.0","3.5.0","3.5.1","3.5.2","3.5.5","3.5.6","3.6.0","3.6.1","3.6.2","3.7.0","3.8.0","3.8.1","3.8.2","3.8.3","3.8.4","3.8.5","3.8.6","3.8.7","3.8.8","3.8.9","3.8.10","3.8.11","3.9.0","3.9.1","4.0.0"]
+442 error notarget
+442 error notarget This is most likely not a problem with npm itself.
+442 error notarget In most cases you or one of your dependencies are requesting
+442 error notarget a package version that doesn't exist.
+443 error System Windows_NT 10.0.16299
+444 error command "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--scripts-prepend-node-path=auto"
+445 error cwd C:\Users\karlo\Desktop\Projekt\CoachMe\front
+446 error node -v v8.9.1
+447 error npm -v 1.3.24
+448 error code ETARGET
+449 verbose exit [ 1, true ]
