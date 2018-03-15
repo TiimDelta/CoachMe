@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @Setter
 public class Training {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     Integer Id;
     String trainer;
     String location;

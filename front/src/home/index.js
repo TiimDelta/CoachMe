@@ -5,8 +5,18 @@ export class Home{
   trainingData ={ "trainer" : "",
                   "location":"",
                   "workout":"",
-                  "mail":""}
+                  "mail":""
+  }
+  trainingList =[]
 
+  activate(){
+    let client = new HttpClient();
+    client.fetch('http://localhost:8080/trainings')
+      .then(response => response.json())
+      .then(trainings => this.trainingList = trainings);
+
+    console.log("Get Method executed!")
+  }
 	addTraining(){
 		let client = new HttpClient();
 

@@ -175,34 +175,14 @@
       <div class="container">
         <h2 class="mb-5">Treenerid</h2>
         <div class="row">
-          <div class="col-lg-4">
+          <div repeat.for="trainings of trainingList" class="col-lg-4">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
-              <h5 class="font-weight-bold">Margaret Tamm</h5>
-              <p class="font-weight-light mb-0">Trenni tüüp: Bodypump</p>
-              <p class="font-weight-light mb-0">Asukoht: Mustamäe MyFitness</p>
-              <p class="font-weight-light mb-0">E-mail: mtamm@hotmail.com</p>
-              <button class="btn btn-primary mt-15" type="submit">Proovi trenni</button>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-2.jpg" alt="">
-              <h5 class="font-weight-bold">Fred Suvi</h5>
-              <p class="font-weight-light mb-0">Trenni tüüp: Tennis</p>
-              <p class="font-weight-light mb-0">Asukoht: Laagri tennisekeskus</p>
-              <p class="font-weight-light mb-0">E-mail: fsuvi@gmail.com</p>
-              <button class="btn btn-primary mt-15" type="submit">Proovi trenni</button>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-              <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-3.jpg" alt="">
-              <h5 class="font-weight-bold">Saara Puu</h5>
-              <p class="font-weight-light mb-0">Trenni tüüp: Ratsutamine</p>
-              <p class="font-weight-light mb-0">Asukoht: Niitvälja</p>
-              <p class="font-weight-light mb-0">E-mail: spuu@hotmail.com</p>
-              <button class="btn btn-primary mt-15" type="submit">Proovi trenni</button>
+              <h5 class="font-weight-bold">Treener: ${trainings.trainer}</h5>
+              <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
+              <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
+              <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
+              <button class="btn btn-primary mt-15" type="submit"  >Proovi trenni</button>
             </div>
           </div>
         </div>
