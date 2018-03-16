@@ -18,6 +18,7 @@ export class Home{
     console.log("Get Method executed!")
   }
 	addTraining(){
+    this.activate();
 		let client = new HttpClient();
 
 
@@ -31,6 +32,7 @@ export class Home{
 				console.log("Server saatis " + data.trainer);
 		});
 
-		console.log("Method executed!")
+		console.log("Method executed!");
+
 	}
 }
