@@ -1,9 +1,6 @@
 <template>
 	<require from="bootstrap/css/bootstrap.css"></require>
     <require from="./style.css"></require>
-    <!DOCTYPE html>
-<html lang="en">
-
   <head>
 
     <meta charset="utf-8">
@@ -72,10 +69,33 @@
                   <input type="radio" name="usertype" value="coach" checked> Treener<br>
                   <input type="radio" name="usertype" value="guest"> Külastaja<br>
 
-                  <button class="btn btn-primary mt-15" type="submit">Registreeri</button>
+                  <button class="btn btn-primary mt-15" type="submit" onclick="submitForm()">Registreeri</button>
                 </div>
               </form>
             </div>
+          <button class="btn btn-primary" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
+          <div id="profile" class="modal">
+            <form id="userform" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('profile').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+              <div class="popupcontainer">
+                <label for="trainer"><b>Treeneri nimi</b></label>
+                <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
+
+                <label for="location"><b>Asukoht</b></label>
+                <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" value.bind="trainingData.location" required>
+
+                <label for="workout"><b>Trenni tüüp</b></label>
+                <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
+
+                <label for="mail"><b>E-mail</b></label>
+                <input id=="mail" type="email" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
+
+                <button class="btn btn-primary" type="submit">Lisa</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </nav>
@@ -218,25 +238,6 @@
         </div>
       </div>
     </section>
-    <div>
-      <form id="userform" submit.delegate="addTraining()" class="form-horizontal">
-        <div>
-          <label for="trainer"><b>Treeneri nimi</b></label>
-          <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
-
-					<label for="location"><b>Asukoht</b></label>
-          <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" value.bind="trainingData.location" required>
-
-          <label for="workout"><b>Trenni tüüp</b></label>
-          <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
-
-          <label for="mail"><b>email</b></label>
-          <input id=="mail" type="text" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
-
-          <button class="btn btn-primary" type="submit">Lisa</button>
-        </div>
-      </form>
-    </div>
 
 
 
@@ -288,25 +289,10 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script>
-      // Get the modal
-      var modal = document.getElementById('login');
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-    </script>
 
   </body>
-
-</html>
-
 </template>
