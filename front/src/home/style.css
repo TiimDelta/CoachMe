@@ -169,13 +169,22 @@ footer.footer {
 .bg-light{
   background-color: rgb(216, 220, 222)!important;
 }
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.reg > input[type=text], .reg > input[type=password], .reg > input[type=email] {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 .font-weight-bold{
   font-weight: bold;
@@ -188,10 +197,13 @@ input[type=text], input[type=password] {
 }
 
 /* Center the image and position the close button */
-.imgcontainer {
+.imgcontainer, .registercontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
+}
+.registercontainer{
+  margin: 15px 0 5px 0;
 }
 
 .container, .popupcontainer {
@@ -217,13 +229,19 @@ span.psw {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
 }
-
+#register.modal{
+  padding-top: 45px;
+}
 /* Modal Content/Box */
-.modal-content {
+.modal-content, .register-modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 30%; /* Could be more or less, depending on screen size */
+}
+
+.register-modal-content{
+  margin: -2% auto 15% auto;
 }
 
 /* The Close Button (x) */
