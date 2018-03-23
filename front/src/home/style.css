@@ -1,5 +1,12 @@
+html{
+  height: 100%;
+}
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+.navbar-collapse.collapse.imp{
+  display: flex !important;
 }
 
 h1,
@@ -177,7 +184,9 @@ input[type=text], input[type=password], input[type=email] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+label{
+  float:left;
+}
 .reg > input[type=text], .reg > input[type=password], .reg > input[type=email] {
   width: 100%;
   padding: 6px 10px;
@@ -282,4 +291,29 @@ span.psw {
 }
 .navbar{
   margin-bottom: 0px !important;
+}
+.navbar-nav{
+  justify-content: center;
+}
+.form-inline{
+  float: right;
+}
+.navbar-collapse.collapse{
+  display: flex !important;
+}
+.nav-item{
+  font-size: 16px;
+}
+.nav-link{
+  padding-right: 15px!important;
+  padding-left: 15px!important;
+}
+.btn-back{
+  float: left;
+  margin-left: 35px;
+}
+.testimonials{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height:auto;
 }

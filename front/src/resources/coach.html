@@ -1,0 +1,50 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="home/style.css"></require>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CoachMe</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="btn-back">
+      <a class="btn btn-primary" href="index.html">Tagasi</a>
+    </div>
+    <div class="container">
+      <h2 class="mb-5">Treenerid</h2>
+      <div class="row">
+        <div repeat.for="trainings of trainingList" class="col-lg-3">
+          <div class="testimonial-item mx-auto mb-5">
+            <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
+            <h5 class="font-weight-bold">Treener: ${trainings.trainer}</h5>
+            <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
+            <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
+            <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
+            <button class="btn btn-primary mt-15" type="submit"  >Proovi trenni</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</template>
