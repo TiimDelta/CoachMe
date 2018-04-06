@@ -33,3 +33,26 @@ dependencies {
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+/*
+task hello {
+    doLast {
+        println 'Hello world AGAIN!'
+    }
+    doFirst {
+        println 'Hello world!'
+        4.times {println 'HELLO!'}
+    }
+}
+
+task bye (dependsOn: 'hello'){
+    doFirst {
+        println 'Good Bye!'
+    }
+}
+
+task proov (dependsOn: 'bye'){
+    doFirst {
+        println 'KAS NII KÄIB SEE ASI?'
+    }
+}
+*/

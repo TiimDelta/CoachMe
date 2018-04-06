@@ -100,6 +100,12 @@
                 <label for="mail"><b>E-mail</b></label>
                 <input id=="mail" type="email" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
 
+                <label for="mail"><b>Pilt</b></label>
+                <div id="profile-container">
+                  <image id="profileImage" src="http://lorempixel.com/100/100" />
+                </div>
+                <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
+                
                 <button class="btn btn-primary" type="submit">Lisa</button>
               </div>
             </form>
@@ -189,10 +195,30 @@
       </div>
     </footer>
 
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--
+    SEE jquery osa tuleks tööle saada, et üldse läbi aurelia saaks pilti lisada!?!?
+    HTML failis see kood ei tööta!
+    <script type="text/javascript">
+        $("#profileImage").click(function(e) {
+        $("#imageUpload").click();
+        });
+
+      function fasterPreview( uploader ) {
+      if ( uploader.files && uploader.files[0] ){
+      $('#profileImage').attr('src', window.URL.createObjectURL(uploader.files[0]) );
+      }
+      }
+
+      $("#imageUpload").change(function(){
+      fasterPreview( this );
+      });
+      </script>
+      -->
 
   </body>
 </template>
