@@ -1,4 +1,5 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
+import environment from '../environment'
 
 export class coach{
 
@@ -11,7 +12,7 @@ export class coach{
 
   activate(){
     let client = new HttpClient();
-    client.fetch('http://localhost:8080/trainings')
+    client.fetch(environment.url + 'trainings')
       .then(response => response.json())
       .then(trainings => this.trainingList = trainings);
 
@@ -23,7 +24,7 @@ export class coach{
 
 
 
-    client.fetch('http://localhost:8080/trainings/add', {
+    client.fetch(environment.url + 'trainings/add', {
       'method': "POST",
       'body': json(this.trainingData)
     })
