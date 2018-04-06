@@ -289,6 +289,12 @@ span.psw {
        width: 100%;
     }
 }
+@media screen and (min-width: 1300px) {
+  .carousel-caption{
+    right: 5% !important;
+    padding-bottom: 10% !important;
+  }
+}
 .navbar{
   margin-bottom: 0px !important;
 }
