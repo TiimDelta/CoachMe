@@ -24,6 +24,6 @@ public class TrainingService {
     }
 
     public List<Training> getAllTrainingsSorted(String userInput) {
-        return trainingRepository.findByTrainerContaining(userInput);
+        return trainingRepository.findByTrainerContainingOrLocationContainingOrWorkoutContaining(userInput,userInput,userInput);
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface TrainingRepository extends JpaRepository<Training, Long> {
     List<Training> findAll();
-    List<Training> findByTrainerContaining(String userInput);
+    List<Training> findByTrainerContainingOrLocationContainingOrWorkoutContaining(String trainer, String location, String workout);
 
 }
 
