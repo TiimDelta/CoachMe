@@ -23,4 +23,9 @@ public class TrainingController {
     public List<Training> getAllTrainings() {
         return trainingService.getAllTrainings();
     }
+
+    @RequestMapping(value="/trainings/{userInput}", method=RequestMethod.GET)
+    public List<Training> getAllTrainingsSorted(@PathVariable("userInput") String userInput) {
+        return trainingService.getAllTrainingsSorted(userInput);
+    }
 }

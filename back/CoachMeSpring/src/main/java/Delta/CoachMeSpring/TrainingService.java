@@ -22,4 +22,8 @@ public class TrainingService {
     List<Training> getAllTrainings() {
         return trainingRepository.findAll();
     }
+
+    public List<Training> getAllTrainingsSorted(String userInput) {
+        return trainingRepository.findByTrainerContaining(userInput);
+    }
 }
