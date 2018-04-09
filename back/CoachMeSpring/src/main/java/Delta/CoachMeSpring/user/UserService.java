@@ -3,6 +3,7 @@ package Delta.CoachMeSpring.user;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -17,4 +18,8 @@ public class UserService {
     }
 
     List<User> getAllUsers() { return userRepository.findAll(); }
+
+    public Optional<User> getUser(Long user) {
+        return userRepository.findById(user);
+    }
 }

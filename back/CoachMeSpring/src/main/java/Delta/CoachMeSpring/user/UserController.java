@@ -3,6 +3,7 @@ package Delta.CoachMeSpring.user;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class UserController {
@@ -22,6 +23,11 @@ public class UserController {
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public List<User> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    @RequestMapping(value = "/users/{userID}", method = RequestMethod.GET)
+    public Optional<User> getUser(@PathVariable("userID") Long user) {
+        return userService.getUser(user);
     }
 
 }

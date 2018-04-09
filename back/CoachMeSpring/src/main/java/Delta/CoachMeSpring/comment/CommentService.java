@@ -15,7 +15,7 @@ public class CommentService {
         return commentRepository.save(comment);
     }
 
-    List<Comment> getAllComments(){
-        return commentRepository.findAll();
+    public List<Comment> getTrainingComments(Integer training) {
+        return commentRepository.findByTrainingOrderByTimePostedAsc(training);
     }
 }
