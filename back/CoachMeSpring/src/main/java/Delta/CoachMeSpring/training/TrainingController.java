@@ -1,4 +1,4 @@
-package Delta.CoachMeSpring.Training;
+package Delta.CoachMeSpring.training;
 
 import org.springframework.web.bind.annotation.*;
 

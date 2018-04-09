@@ -1,7 +1,7 @@
-package Delta.CoachMeSpring.Comment;
+package Delta.CoachMeSpring.comment;
 
-import Delta.CoachMeSpring.Training.Training;
-import Delta.CoachMeSpring.User.User;
+import Delta.CoachMeSpring.training.Training;
+import Delta.CoachMeSpring.user.User;
 import lombok.Getter;
 import lombok.Setter;
 
