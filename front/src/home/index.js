@@ -1,4 +1,5 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
+import environment from '../environment'
 
 export class Home{
 
@@ -8,31 +9,40 @@ export class Home{
                   "mail":""
   }
   trainingList =[]
+  searchInput="";
+
 
   activate(){
     let client = new HttpClient();
-    client.fetch('http://localhost:8080/trainings')
-      .then(response => response.json())
-      .then(trainings => this.trainingList = trainings);
 
-    console.log("Get Method executed!")
+    if (this.searchInput != "") {
+      client.fetch(environment.url + 'trainings/'+this.searchInput)
+        .then(response => response.json())
+        .then(trainings => this.trainingList = trainings);
+        console.log("OOOO keegi otsib")
+    }
+    else {
+      client.fetch(environment.url + 'trainings')
+        .then(response => response.json())
+        .then(trainings => this.trainingList = trainings);
+
+      console.log("Get Method executed!")
+    }
+
   }
 	addTraining(){
     this.activate();
-		let client = new HttpClient();
+    let client = new HttpClient();
 
+    client.fetch(environment.url + 'trainings/add', {
+      'method': "POST",
+      'body': json(this.trainingData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Server saatis " + data.trainer);
+      });
 
-
-		client.fetch('http://localhost:8080/trainings/add', {
-			'method': "POST",
-			'body': json(this.trainingData)
-		})
-			.then(response => response.json())
-			.then(data => {
-				console.log("Server saatis " + data.trainer);
-		});
-
-		console.log("Method executed!");
-
-	}
+    console.log("Method executed!");
+  }
 }
