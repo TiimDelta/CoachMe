@@ -6,22 +6,36 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.util.Date;
 import java.util.List;
 
 
 @Entity
 @Getter
 @Setter
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer Id;
+    @NotNull
+    @Column(unique = true)
     String username;
+    @NotNull
     String firstName;
+    @NotNull
     String lastName;
-    String Password;
+    @NotNull
+    String password;
+    @NotNull
     String mail;
+    @NotNull
     Boolean userType;
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created_at")
+    private Date createdAt = new Date();
     @OneToMany(mappedBy="user", cascade=CascadeType.ALL)
     List<Training> trainings;
     @OneToMany(mappedBy="user", cascade= CascadeType.ALL)

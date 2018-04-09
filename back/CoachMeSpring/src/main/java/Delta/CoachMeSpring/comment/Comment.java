@@ -5,27 +5,32 @@ import Delta.CoachMeSpring.user.User;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 
 @Entity
 @Getter
 @Setter
+@Table(name = "comments")
 public class Comment {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer Id;
+    @NotNull
+    @Size(max = 250)
     String text;
-    Integer rating;
-    String mail;
-    Date timePosted;
-    @ManyToOne
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "time")
+    private Date timePosted = new Date();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     User user;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "training_id", nullable = false)
     Training training;
 
 }

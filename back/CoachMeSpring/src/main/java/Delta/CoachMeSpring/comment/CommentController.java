@@ -17,7 +17,7 @@ public class CommentController {
     }
 
     @RequestMapping(value="/comments/{training}", method=RequestMethod.GET)
-    public List<Comment> getAllTrainingsSorted(@PathVariable("training") Integer training) {
+    public List<Comment> getAllTrainingsSorted(@PathVariable("training") String training) {
         return commentService.getTrainingComments(training);
     }
 
