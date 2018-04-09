@@ -1,4 +1,4 @@
-package Delta.CoachMeSpring;
+package Delta.CoachMeSpring.Training;
 
 
 import org.springframework.stereotype.Service;
