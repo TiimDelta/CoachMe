@@ -88,7 +88,7 @@
           </div>
           <button class="btn btn-primary" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
           <div id="profile" class="modal">
-            <form id="userform" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate">
+            <form id="userform" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
               <div class="imgcontainer">
                 <span onclick="document.getElementById('profile').style.display='none'" class="close" title="Close Modal">&times;</span>
               </div>
