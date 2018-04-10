@@ -56,39 +56,40 @@
         </div>
         <button class="btn btn-primary my-2 my-sm-0" onclick="document.getElementById('register').style.display='block'" style="width:auto;">Registreeri</button>
         <div id="register" class="modal">
-          <form class="register-modal-content animate">
+          <form id="userForm" submit.delegate="addUser()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
             <div class="registercontainer">
               <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
             <div class="reg popupcontainer">
-              <label><b>Eesnimi</b></label>
-              <input type="text" placeholder="Eesnimi" name="firstname" required>
 
-              <label><b>Perenimi</b></label>
-              <input type="text" placeholder="Perenimi" name="lastname" required>
+                <label><b>Eesnimi</b></label>
+                <input id=="firstName" type="text" placeholder="Eesnimi" name="firstname" value.bind="userData.firstName"  required>
 
-              <label><b>Kasutajanimi</b></label>
-              <input type="text" placeholder="Kasutajanimi" name="username" required>
+                <label><b>Perenimi</b></label>
+                <input id=="lastName" type="text" placeholder="Perenimi" name="lastname" value.bind="userData.lastName"  required>
 
-              <label><b>Parool</b></label>
-              <input type="password" placeholder="Parool" name="password" required>
+                <label><b>Kasutajanimi</b></label>
+                <input id=="username" type="text" placeholder="Kasutajanimi" name="username" value.bind="userData.username"required>
 
-              <label><b>Kinnita parool</b></label>
-              <input type="password" placeholder="Kinnita parool" name="confirmpassword" required>
+                <label><b>Parool</b></label>
+                <input type="password" placeholder="Parool" name="password" required>
 
-              <label><b>E-mail</b></label>
-              <input type="email" placeholder="E-mail" name="email" required>
+                <label><b>Kinnita parool</b></label>
+                <input id=="password" type="password" placeholder="Kinnita parool" name="confirmpassword" value.bind="userData.password" required>
 
-              <input type="radio" name="usertype" value="coach" checked> Treener<br>
-              <input type="radio" name="usertype" value="guest"> Külastaja<br>
+                <label><b>E-mail</b></label>
+                <input id=="email" type="email" placeholder="E-mail" name="email" value.bind="userData.mail" required>
 
-              <button class="btn btn-primary mt-15" type="submit" onclick="submitForm()">Registreeri</button>
+                <input type="radio" name="usertype" value="true" checked> Treener<br>
+                <input type="radio" name="usertype" value="false"> Külastaja<br>
+
+              <button class="btn btn-primary mt-15" type="submit">Registreeri</button>
             </div>
           </form>
         </div>
         <button class="btn btn-primary" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
         <div id="profile" class="modal">
-          <form id="userform" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
+          <form id="trainingForm" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
             <div class="imgcontainer">
               <span onclick="document.getElementById('profile').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>

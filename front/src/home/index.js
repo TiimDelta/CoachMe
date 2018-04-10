@@ -4,13 +4,21 @@ import environment from '../environment'
 export class Home{
 
   trainingData ={ "id" : "",
-				  "trainer" : "",
+				          "trainer" : "",
                   "location":"",
                   "workout":"",
                   "mail":""
   }
+  userData ={     "username" : "",
+                  "firstName" : "",
+                  "lastname":"",
+                  "password":"",
+                  "mail":"",
+                  "userType":"false"
+  }
   trainingList =[]
   searchInput="";
+
 
 
   activate(){
@@ -45,5 +53,20 @@ export class Home{
       });
 
     console.log("Method executed!");
+  }
+  addUser(){
+    this.activate();
+    let client = new HttpClient();
+
+    client.fetch(environment.url + 'users/add', {
+      'method': "POST",
+      'body': json(this.userData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Server saatis " + data.username);
+      });
+
+    console.log("User registered");
   }
 }
