@@ -16,10 +16,12 @@ public class CommentController {
         return commentService.addComment(comment);
     }
 
+    /*
     @RequestMapping(value="/comments/{training}", method=RequestMethod.GET)
     public List<Comment> getAllTrainingsSorted(@PathVariable("training") String training) {
         return commentService.getTrainingComments(training);
     }
+    */
 
 }
 

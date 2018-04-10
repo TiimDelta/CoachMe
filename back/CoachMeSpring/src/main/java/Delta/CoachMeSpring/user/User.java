@@ -36,9 +36,10 @@ public class User {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
     private Date createdAt = new Date();
+    /*
     @OneToMany(mappedBy="user", cascade=CascadeType.ALL)
     List<Training> trainings;
     @OneToMany(mappedBy="user", cascade= CascadeType.ALL)
     List<Comment> comments;
-
+    */
 }

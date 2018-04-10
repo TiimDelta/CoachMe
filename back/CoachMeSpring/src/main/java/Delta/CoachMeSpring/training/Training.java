@@ -24,10 +24,10 @@ public class Training {
     String location;
     @NotNull
     String workout;
-    @ManyToOne(fetch = FetchType.LAZY)
+    /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     User user;
     @OneToMany(mappedBy="training", cascade= CascadeType.ALL)
     List<Comment> comments;
-
+    */
 }

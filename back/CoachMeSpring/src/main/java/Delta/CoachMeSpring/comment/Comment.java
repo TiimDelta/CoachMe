@@ -26,11 +26,12 @@ public class Comment {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "time")
     private Date timePosted = new Date();
+    /*
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     User user;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "training_id", nullable = false)
     Training training;
-
+    */
 }
