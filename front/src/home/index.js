@@ -3,7 +3,8 @@ import environment from '../environment'
 
 export class Home{
 
-  trainingData ={ "trainer" : "",
+  trainingData ={ "id" : "",
+				  "trainer" : "",
                   "location":"",
                   "workout":"",
                   "mail":""

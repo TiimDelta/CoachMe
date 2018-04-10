@@ -24,6 +24,8 @@ public class Training {
     String location;
     @NotNull
     String workout;
+    @NotNull
+    String mail;
     /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     User user;
