@@ -44,10 +44,10 @@
               <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
             <div class="popupcontainer">
-              <label for="username"><b>Username</b></label>
+              <label><b>Username</b></label>
               <input type="text" placeholder="Enter Username" name="username" required>
 
-              <label for="password"><b>Password</b></label>
+              <label><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="password" required>
 
               <button class="btn btn-primary" type="submit">Login</button>
@@ -61,22 +61,22 @@
               <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
             <div class="reg popupcontainer">
-              <label for="firstname"><b>Eesnimi</b></label>
+              <label><b>Eesnimi</b></label>
               <input type="text" placeholder="Eesnimi" name="firstname" required>
 
-              <label for="lastname"><b>Perenimi</b></label>
+              <label><b>Perenimi</b></label>
               <input type="text" placeholder="Perenimi" name="lastname" required>
 
-              <label for="username"><b>Kasutajanimi</b></label>
+              <label><b>Kasutajanimi</b></label>
               <input type="text" placeholder="Kasutajanimi" name="username" required>
 
-              <label for="password"><b>Parool</b></label>
+              <label><b>Parool</b></label>
               <input type="password" placeholder="Parool" name="password" required>
 
-              <label for="confirmpassword"><b>Kinnita parool</b></label>
+              <label><b>Kinnita parool</b></label>
               <input type="password" placeholder="Kinnita parool" name="confirmpassword" required>
 
-              <label for="email"><b>E-mail</b></label>
+              <label><b>E-mail</b></label>
               <input type="email" placeholder="E-mail" name="email" required>
 
               <input type="radio" name="usertype" value="coach" checked> Treener<br>
@@ -97,19 +97,19 @@
                 <image id="profileImage" src="http://lorempixel.com/100/100" />
               </div>
               <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
-              <label for="trainer"><b>Treeneri nimi</b></label>
+              <label><b>Treeneri nimi</b></label>
               <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
 
-              <label for="location"><b>Asukoht</b></label>
+              <label><b>Asukoht</b></label>
               <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" value.bind="trainingData.location" required>
 
-              <label for="workout"><b>Trenni tüüp</b></label>
+              <label><b>Trenni tüüp</b></label>
               <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
 
-              <label for="mail"><b>E-mail</b></label>
+              <label><b>E-mail</b></label>
               <input id=="mail" type="email" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
 
-              <button class="btn btn-primary" type="submit" href="#trainers">Lisa</button>
+              <button class="btn btn-primary" type="submit">Lisa</button>
             </div>
           </form>
         </div>
@@ -155,7 +155,7 @@
             <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
             <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
             <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
-            <button class="btn btn-primary ml-15 my-2 my-sm-0" onclick="document.getElementById('info').style.display='block'" style="width:auto;">Rohkem infot</button>
+            <button class="btn btn-primary my-2 my-sm-0" onclick="document.getElementById('info').style.display='block'" style="width:auto;">Rohkem infot</button>
             <div id="info" class="modal">
               <form class="modal-content animate">
                 <div class="imgcontainer">
