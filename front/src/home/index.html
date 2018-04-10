@@ -1,6 +1,6 @@
 <template>
-	<require from="bootstrap/css/bootstrap.css"></require>
-    <require from="./style.css"></require>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="./style.css"></require>
   <head>
 
     <meta charset="utf-8">
@@ -19,229 +19,241 @@
 
   <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">CoachMe</a>
-      <div class="collapse navbar-collapse imp">
-        <ul class="navbar-nav mr-auto col-sm-8">
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" href="/#/coach">Treenerid</a>
-          </li>
-          -->
-          <li class="nav-item">
-            <a class="nav-link" href="#trainers">Treenerid</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#aboutus">Meist</a>
-          </li>
-        </ul>
-        <div class="form-inline my-2 my-lg-0">
-          <button class="btn btn-primary ml-15 my-2 my-sm-0" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Logi sisse</button>
-          <div id="login" class="modal">
-            <form class="modal-content animate">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">CoachMe</a>
+    <div class="collapse navbar-collapse imp">
+      <ul class="navbar-nav mr-auto col-sm-8">
+        <!--
+        <li class="nav-item">
+          <a class="nav-link" href="/#/coach">Treenerid</a>
+        </li>
+        -->
+        <li class="nav-item">
+          <a class="nav-link" href="#trainers">Treenerid</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutus">Meist</a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <button class="btn btn-primary ml-15 my-2 my-sm-0" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Logi sisse</button>
+        <div id="login" class="modal">
+          <form class="modal-content animate">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="popupcontainer">
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+
+              <label for="password"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password" required>
+
+              <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+        <button class="btn btn-primary my-2 my-sm-0" onclick="document.getElementById('register').style.display='block'" style="width:auto;">Registreeri</button>
+        <div id="register" class="modal">
+          <form class="register-modal-content animate">
+            <div class="registercontainer">
+              <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="reg popupcontainer">
+              <label for="firstname"><b>Eesnimi</b></label>
+              <input type="text" placeholder="Eesnimi" name="firstname" required>
+
+              <label for="lastname"><b>Perenimi</b></label>
+              <input type="text" placeholder="Perenimi" name="lastname" required>
+
+              <label for="username"><b>Kasutajanimi</b></label>
+              <input type="text" placeholder="Kasutajanimi" name="username" required>
+
+              <label for="password"><b>Parool</b></label>
+              <input type="password" placeholder="Parool" name="password" required>
+
+              <label for="confirmpassword"><b>Kinnita parool</b></label>
+              <input type="password" placeholder="Kinnita parool" name="confirmpassword" required>
+
+              <label for="email"><b>E-mail</b></label>
+              <input type="email" placeholder="E-mail" name="email" required>
+
+              <input type="radio" name="usertype" value="coach" checked> Treener<br>
+              <input type="radio" name="usertype" value="guest"> Külastaja<br>
+
+              <button class="btn btn-primary mt-15" type="submit" onclick="submitForm()">Registreeri</button>
+            </div>
+          </form>
+        </div>
+        <button class="btn btn-primary" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
+        <div id="profile" class="modal">
+          <form id="userform" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('profile').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="popupcontainer">
+              <div id="profile-container" class="profilepic">
+                <image id="profileImage" src="http://lorempixel.com/100/100" />
               </div>
-              <div class="popupcontainer">
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+              <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
+              <label for="trainer"><b>Treeneri nimi</b></label>
+              <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
 
-                <label for="password"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+              <label for="location"><b>Asukoht</b></label>
+              <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" value.bind="trainingData.location" required>
 
-                <button class="btn btn-primary" type="submit">Login</button>
-              </div>
-            </form>
-          </div>
-          <button class="btn btn-primary my-2 my-sm-0" onclick="document.getElementById('register').style.display='block'" style="width:auto;">Registreeri</button>
-          <div id="register" class="modal">
-            <form class="register-modal-content animate">
-              <div class="registercontainer">
-                <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
-              </div>
-              <div class="reg popupcontainer">
-                <label for="firstname"><b>Eesnimi</b></label>
-                <input type="text" placeholder="Eesnimi" name="firstname" required>
+              <label for="workout"><b>Trenni tüüp</b></label>
+              <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
 
-                <label for="lastname"><b>Perenimi</b></label>
-                <input type="text" placeholder="Perenimi" name="lastname" required>
+              <label for="mail"><b>E-mail</b></label>
+              <input id=="mail" type="email" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
 
-                <label for="username"><b>Kasutajanimi</b></label>
-                <input type="text" placeholder="Kasutajanimi" name="username" required>
-
-                <label for="password"><b>Parool</b></label>
-                <input type="password" placeholder="Parool" name="password" required>
-
-                <label for="confirmpassword"><b>Kinnita parool</b></label>
-                <input type="password" placeholder="Kinnita parool" name="confirmpassword" required>
-
-                <label for="email"><b>E-mail</b></label>
-                <input type="email" placeholder="E-mail" name="email" required>
-
-                <input type="radio" name="usertype" value="coach" checked> Treener<br>
-                <input type="radio" name="usertype" value="guest"> Külastaja<br>
-
-                <button class="btn btn-primary mt-15" type="submit" onclick="submitForm()">Registreeri</button>
-              </div>
-            </form>
-          </div>
-          <button class="btn btn-primary" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
-          <div id="profile" class="modal">
-            <form id="userform" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('profile').style.display='none'" class="close" title="Close Modal">&times;</span>
-              </div>
-              <div class="popupcontainer">
-                <label for="trainer"><b>Treeneri nimi</b></label>
-                <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
-
-                <label for="location"><b>Asukoht</b></label>
-                <input id=="location" type="text" placeholder="Sisesta trenni toimumise asukoht" name="asukoht" value.bind="trainingData.location" required>
-
-                <label for="workout"><b>Trenni tüüp</b></label>
-                <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
-
-                <label for="mail"><b>E-mail</b></label>
-                <input id=="mail" type="email" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
-
-                <label for="mail"><b>Pilt</b></label>
-                <div id="profile-container">
-                  <image id="profileImage" src="http://lorempixel.com/100/100" />
-                </div>
-                <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
-                
-                <button class="btn btn-primary" type="submit">Lisa</button>
-              </div>
-            </form>
-          </div>
+              <button class="btn btn-primary" type="submit" href="#trainers">Lisa</button>
+            </div>
+          </form>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Masthead -->
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="src/img/slaid1.jpg" alt="gym">
-            <div class="carousel-caption">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                    <form submit.delegate="activate()">
-                      <div class="form-row">
-                        <div class="col-12 col-md-9 mb-2 mb-md-0">
-                          <input type="search" value.bind="searchInput"class="form-control form-control-lg" placeholder="Otsi treenerit...">
-                        </div>
-                        <div class="col-12 col-md-1">
-                          <button class="btn btn-primary" type="submit">Otsi</button>
-                        </div>
-                      </div>
-                    </form>
+  <!-- Masthead -->
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="src/img/slaid1.jpg" alt="gym">
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+                <form submit.delegate="activate()">
+                  <div class="form-row">
+                    <div class="col-12 col-md-9 mb-2 mb-md-0">
+                      <input type="search" value.bind="searchInput"class="form-control form-control-lg" placeholder="Otsi treenerit...">
+                    </div>
+                    <div class="col-12 col-md-1">
+                      <button class="btn btn-primary" type="submit">Otsi</button>
+                    </div>
                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="testimonials text-center bg-light" id="trainers">
+    <div class="container">
+      <h2 class="mb-5">Treenerid</h2>
+      <div class="row">
+        <div repeat.for="trainings of trainingList" class="col-lg-3">
+          <div class="testimonial-item mx-auto mb-5">
+            <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
+            <h5 class="font-weight-bold">Treener: ${trainings.trainer}</h5>
+            <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
+            <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
+            <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
+            <button class="btn btn-primary ml-15 my-2 my-sm-0" onclick="document.getElementById('info').style.display='block'" style="width:auto;">Rohkem infot</button>
+            <div id="info" class="modal">
+              <form class="modal-content animate">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('info').style.display='none'" class="close" title="Close Modal">&times;</span>
                 </div>
-              </div>
+                <div class="popupcontainer">
+                  <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
+                  <h5 class="font-weight-bold">Treener: ${trainings.trainer}</h5>
+                  <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
+                  <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
+                  <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <section class="testimonials text-center bg-light" id="trainers">
-        <div class="container">
-          <h2 class="mb-5">Treenerid</h2>
-          <div class="row">
-            <div repeat.for="trainings of trainingList" class="col-lg-3">
-              <div class="testimonial-item mx-auto mb-5">
-                <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
-                <h5 class="font-weight-bold">Treener: ${trainings.trainer}</h5>
-                <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
-                <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
-                <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
-                <button class="btn btn-primary mt-15" type="submit"  >Proovi trenni</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-       <section class="text-center bg-light" id="aboutus">
-        <div class="container">
-          <h2 class="mb-5">Meist</h2>
-          <p>Tervitused CoachMe tiimi poolt!</p>
-          <p>Siit leiad endale meelepärased treeneri</p>
-        </div>
-      </section>
+    </div>
+  </section>
+  <section class="text-center bg-light" id="aboutus">
+    <div class="container">
+      <h2 class="mb-5">Meist</h2>
+      <p>Tervitused CoachMe tiimi poolt!</p>
+      <p>Siit leiad endale meelepärased treeneri</p>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-            <ul class="list-inline mb-2">
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-              <li class="list-inline-item">&sdot;</li>
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
-            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
-          </div>
-          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fa fa-facebook fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li class="list-inline-item mr-3">
-                <a href="#">
-                  <i class="fa fa-twitter fa-2x fa-fw"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-instagram fa-2x fa-fw"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2018. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fa fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fa fa-twitter fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="index.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--
-    SEE jquery osa tuleks tööle saada, et üldse läbi aurelia saaks pilti lisada!?!?
-    HTML failis see kood ei tööta!
-    <script type="text/javascript">
-        $("#profileImage").click(function(e) {
-        $("#imageUpload").click();
-        });
 
-      function fasterPreview( uploader ) {
-      if ( uploader.files && uploader.files[0] ){
-      $('#profileImage').attr('src', window.URL.createObjectURL(uploader.files[0]) );
-      }
-      }
-
-      $("#imageUpload").change(function(){
-      fasterPreview( this );
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--
+  SEE jquery osa tuleks tööle saada, et üldse läbi aurelia saaks pilti lisada!?!?
+  HTML failis see kood ei tööta!
+  <script type="text/javascript">
+      $("#profileImage").click(function(e) {
+      $("#imageUpload").click();
       });
-      </script>
-      -->
+
+    function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+    $('#profileImage').attr('src', window.URL.createObjectURL(uploader.files[0]) );
+    }
+    }
+
+    $("#imageUpload").change(function(){
+    fasterPreview( this );
+    });
+    </script>
+    -->
 
   </body>
 </template>
