@@ -14,8 +14,9 @@ public class CommentService {
     Comment addComment(Comment comment){
         return commentRepository.save(comment);
     }
-
-    public List<Comment> getTrainingComments(Integer training) {
+    /*
+    public List<Comment> getTrainingComments(String training) {
         return commentRepository.findByTrainingOrderByTimePostedAsc(training);
     }
+    */
 }
