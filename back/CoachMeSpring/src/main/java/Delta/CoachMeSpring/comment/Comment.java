@@ -21,6 +21,7 @@ public class Comment {
     Integer Id;
     @NotNull
     @Size(max = 250)
+    public
     String text;
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
@@ -34,4 +35,14 @@ public class Comment {
     @JoinColumn(name = "training_id", nullable = false)
     Training training;
     */
+
+    public Comment( String text){
+        this.text = text;
+        //this.timePosted = timePosted;
+    }
+
+    Comment(){
+
+    }
 }
+

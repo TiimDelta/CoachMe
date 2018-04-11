@@ -22,10 +22,13 @@ public class Training {
     public
     String trainer;
     @NotNull
+    public
     String location;
     @NotNull
+    public
     String workout;
     @NotNull
+    public
     String mail;
     /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)

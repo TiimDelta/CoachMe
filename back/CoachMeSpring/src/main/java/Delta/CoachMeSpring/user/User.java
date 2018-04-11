@@ -21,16 +21,22 @@ public class User {
     Integer Id;
     @NotNull
     @Column(unique = true)
+    public
     String username;
     @NotNull
+    public
     String firstName;
     @NotNull
+    public
     String lastName;
     @NotNull
+    public
     String password;
     @NotNull
+    public
     String mail;
     @NotNull
+    public
     Boolean userType;
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
@@ -42,4 +48,17 @@ public class User {
     @OneToMany(mappedBy="user", cascade= CascadeType.ALL)
     List<Comment> comments;
     */
+
+    public User( String username, String firstname, String lastname, String password, String mail, Boolean userType){
+        this.username = username;
+        this.firstName = firstname;
+        this.lastName = lastname;
+        this.password = password;
+        this.mail = mail;
+        this.userType = userType;
+    }
+
+    User(){
+
+    }
 }

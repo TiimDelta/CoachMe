@@ -54,21 +54,21 @@ public class TrainingTest {
     @Test
     public void locationTest(){
         int lenght = trainingList.size();
-        String location = trainingList.get(lenght -1).getLocation();
-        assertEquals(location, train.getLocation());
+        String location = trainingList.get(lenght -1).location;
+        assertEquals(location, train.location);
     }
 
     @Test
     public void workoutTest(){
         int lenght = trainingList.size();
-        String workout = trainingList.get(lenght -1).getWorkout();
-        assertEquals(workout, train.getWorkout());
+        String workout = trainingList.get(lenght -1).workout;
+        assertEquals(workout, train.workout);
     }
 
     @Test
     public void mailTest(){
         int lenght = trainingList.size();
-        String mail = trainingList.get(lenght -1).getMail();
-        assertEquals(mail, train.getMail());
+        String mail = trainingList.get(lenght -1).mail;
+        assertEquals(mail, train.mail);
     }
 }
