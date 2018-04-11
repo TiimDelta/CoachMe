@@ -19,6 +19,7 @@ public class Training {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer Id;
     @NotNull
+    public
     String trainer;
     @NotNull
     String location;
@@ -32,4 +33,15 @@ public class Training {
     @OneToMany(mappedBy="training", cascade= CascadeType.ALL)
     List<Comment> comments;
     */
+
+    public Training( String trainer, String location, String workout, String mail){
+        this.trainer = trainer;
+        this.location = location;
+        this.workout = workout;
+        this.mail = mail;
+    }
+
+    Training(){
+
+    }
 }
