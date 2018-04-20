@@ -69,4 +69,12 @@ export class Home{
 
     console.log("User registered");
   }
+  uploadImage(){
+    this.profileImage.click();
+  }
+  profileImageChange(){
+    if (this.profileImage.files && this.profileImage.files[0]){
+      this.updateImage.setAttribute('src', window.URL.createObjectURL(this.profileImage.files[0]));
+    }
+  }
 }

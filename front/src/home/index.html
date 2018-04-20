@@ -95,9 +95,9 @@
             </div>
             <div class="popupcontainer">
               <div id="profile-container" class="profilepic">
-                <image id="profileImage" src="http://lorempixel.com/100/100" />
+                <image ref="updateImage" click.delegate="uploadImage()" id="profileImage" src="http://lorempixel.com/100/100" />
               </div>
-              <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
+              <input ref="profileImage" change.delegate="profileImageChange()" id="imageUpload" type="file" name="profile_photo" placeholder="Photo" capture>
               <label><b>Treeneri nimi</b></label>
               <input id=="trainer" type="text" placeholder="Sisesta treeneri nimi" name="treeneriNimi" value.bind="trainingData.trainer"required>
 
@@ -131,7 +131,7 @@
                 <form submit.delegate="activate()">
                   <div class="form-row">
                     <div class="col-12 col-md-9 mb-2 mb-md-0">
-                      <input type="search" value.bind="searchInput"class="form-control form-control-lg" placeholder="Otsi treenerit...">
+                      <input type="search" value.bind="searchInput" class="form-control form-control-lg" placeholder="Otsi treenerit...">
                     </div>
                     <div class="col-12 col-md-1">
                       <button class="btn btn-primary" type="submit">Otsi</button>
