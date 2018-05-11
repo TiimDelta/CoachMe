@@ -77,4 +77,11 @@ export class Home{
       this.updateImage.setAttribute('src', window.URL.createObjectURL(this.profileImage.files[0]));
     }
   }
+  showPopup(popupId){
+    document.getElementById(popupId.toString()).style.display='block';
+
+  }
+  closePopup(popupId){
+    document.getElementById(popupId.toString()).style.display='none';
+  }
 }

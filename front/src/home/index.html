@@ -156,11 +156,11 @@
             <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
             <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
             <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
-            <button class="btn btn-primary my-2 my-sm-0" onclick="document.getElementById('info').style.display='block'" style="width:auto;">Rohkem infot</button>
-            <div id="info" class="modal">
+            <button class="btn btn-primary my-2 my-sm-0" click.delegate="showPopup(trainings.id)" style="width:auto;">Rohkem infot</button>
+            <div id="${trainings.id}" class="modal">
               <form class="modal-content animate">
                 <div class="imgcontainer">
-                  <span onclick="document.getElementById('info').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <span click.delegate="closePopup(trainings.id)" class="close" title="Close Modal">&times;</span>
                 </div>
                 <div class="popupcontainer">
                   <img class="img-fluid rounded-circle mb-3" src="src/img/testimonials-1.jpg" alt="">
