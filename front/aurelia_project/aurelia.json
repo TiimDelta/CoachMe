@@ -47,7 +47,12 @@
           "aurelia-dependency-injection",
           "aurelia-event-aggregator",
           "aurelia-framework",
-          "aurelia-fetch-client",
+          {
+            "name": "aurelia-fetch-client",
+            "main": "aurelia-fetch-client",
+            "path": "../node_modules/aurelia-fetch-client/dist/amd",
+            "resources": []
+          },
           "aurelia-history",
           "aurelia-history-browser",
           "aurelia-loader",
