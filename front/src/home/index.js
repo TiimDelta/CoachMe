@@ -4,17 +4,21 @@ import environment from '../environment'
 export class Home{
 
   trainingData ={ "id" : "",
-				          "trainer" : "",
-                  "location":"",
-                  "workout":"",
-                  "mail":""
+    "trainer" : "",
+    "location":"",
+    "workout":"",
+    "mail":""
   }
   userData ={     "username" : "",
-                  "firstName" : "",
-                  "lastname":"",
-                  "password":"",
-                  "mail":"",
-                  "userType":"false"
+    "firstName" : "",
+    "lastname":"",
+    "password":"",
+    "mail":"",
+    "userType":"false"
+  }
+  commentData ={
+    "text":"",
+    "training_id":""
   }
   trainingList =[]
   searchInput="";
@@ -28,7 +32,7 @@ export class Home{
       client.fetch(environment.url + 'trainings/'+this.searchInput)
         .then(response => response.json())
         .then(trainings => this.trainingList = trainings);
-        console.log("OOOO keegi otsib")
+      console.log("OOOO keegi otsib")
     }
     else {
       client.fetch(environment.url + 'trainings')
@@ -39,7 +43,7 @@ export class Home{
     }
 
   }
-	addTraining(){
+  addTraining(){
     this.activate();
     let client = new HttpClient();
 
@@ -83,5 +87,18 @@ export class Home{
   }
   closePopup(popupId){
     document.getElementById(popupId.toString()).style.display='none';
+  }
+  addComment(training_id){
+    let client = new HttpClient();
+    client.fetch(environment.url + 'comments/add', {
+      'method': "POST",
+      'body': json(this.commentData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Server saatis " + data.text);
+      });
+
+    console.log("Method executed!");
   }
 }

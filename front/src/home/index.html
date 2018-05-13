@@ -168,6 +168,10 @@
                   <p class="font-weight-light mb-0">Trenni tüüp: ${trainings.workout}</p>
                   <p class="font-weight-light mb-0">Asukoht: ${trainings.location}</p>
                   <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
+                  <label><b>Kommentaar</b></label>
+                  <input id=="commentpost${trainings.id}" type="text" placeholder="sisesta kommentaar" name="comment" value.bind="commentData.text" required>
+                  <input id=="training_${trainings.id}" type="text" placeholder="sisesta kommentaar" name="comment" value.bind="commentData.training_id" required>
+                  <button class="btn btn-primary my-2 my-sm-0" click.delegate="addComment()" style="width:auto;">Rohkem infot</button>
                 </div>
               </form>
             </div>

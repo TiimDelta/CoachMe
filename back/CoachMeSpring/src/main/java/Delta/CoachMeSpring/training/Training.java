@@ -30,12 +30,9 @@ public class Training {
     @NotNull
     public
     String mail;
-    /*@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    User user;
-    @OneToMany(mappedBy="training", cascade= CascadeType.ALL)
+
+    @OneToMany(mappedBy="training")
     List<Comment> comments;
-    */
 
     public Training( String trainer, String location, String workout, String mail){
         this.trainer = trainer;
