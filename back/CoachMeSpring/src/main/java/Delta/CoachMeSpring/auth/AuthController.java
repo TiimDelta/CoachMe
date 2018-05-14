@@ -20,10 +20,8 @@ public class AuthController {
 
     @RequestMapping(value ="/auth/{provider}", method=RequestMethod.POST,
             consumes = "application/json")
-    public String authenticate(@PathVariable("provider") String provider, @RequestBody AuthRequest request) throws IllegalAccessError, GeneralSecurityException, IOException {
+    public AuthResponse authenticate(@PathVariable("provider") String provider, @RequestBody AuthRequest request) throws IllegalAccessError, GeneralSecurityException, IOException {
 
-        authService.authenticate(request);
-
-        return "Debug to see if it works" + request.getClientId();
+        return authService.authenticate(request);
     }
 }
