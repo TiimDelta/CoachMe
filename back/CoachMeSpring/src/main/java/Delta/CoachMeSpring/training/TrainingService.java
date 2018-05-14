@@ -1,6 +1,8 @@
 package Delta.CoachMeSpring.training;
 
 
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +22,7 @@ public class TrainingService {
     }
 
     List<Training> getAllTrainings() {
+
         return trainingRepository.findAll();
     }
 

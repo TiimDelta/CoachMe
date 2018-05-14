@@ -7,6 +7,7 @@ import java.util.List;
 @RestController
 public class TrainingController {
 
+
     private TrainingService trainingService;
 
     public TrainingController(TrainingService trainingService) {

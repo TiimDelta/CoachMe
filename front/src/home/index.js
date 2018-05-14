@@ -18,7 +18,7 @@ export class Home{
   }
   commentData ={
     "text":"",
-    "training_id":""
+    "training": {"id":""}
   }
   trainingList =[]
   searchInput="";
@@ -27,7 +27,6 @@ export class Home{
 
   activate(){
     let client = new HttpClient();
-
     if (this.searchInput != "") {
       client.fetch(environment.url + 'trainings/'+this.searchInput)
         .then(response => response.json())
@@ -40,6 +39,7 @@ export class Home{
         .then(trainings => this.trainingList = trainings);
 
       console.log("Get Method executed!")
+
     }
 
   }
@@ -89,6 +89,9 @@ export class Home{
     document.getElementById(popupId.toString()).style.display='none';
   }
   addComment(training_id){
+    this.activate();
+
+    this.commentData.training.id = training_id;
     let client = new HttpClient();
     client.fetch(environment.url + 'comments/add', {
       'method': "POST",

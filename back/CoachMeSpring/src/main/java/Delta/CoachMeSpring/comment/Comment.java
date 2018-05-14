@@ -2,6 +2,8 @@ package Delta.CoachMeSpring.comment;
 
 import Delta.CoachMeSpring.training.Training;
 import Delta.CoachMeSpring.user.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +11,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -18,7 +21,7 @@ import java.util.Date;
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer Id;
+    public Integer id;
     @NotNull
     @Size(max = 250)
     public
@@ -27,9 +30,9 @@ public class Comment {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "time")
     private Date timePosted = new Date();
-
+    @JsonBackReference
     @ManyToOne()
-    Training training;
+    public Training training;
 
     public Comment( String text){
         this.text = text;

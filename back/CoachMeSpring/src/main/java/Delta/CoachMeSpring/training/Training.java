@@ -2,8 +2,12 @@ package Delta.CoachMeSpring.training;
 
 import Delta.CoachMeSpring.comment.Comment;
 import Delta.CoachMeSpring.user.User;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -17,7 +21,7 @@ import java.util.List;
 public class Training {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer Id;
+    public Integer id;
     @NotNull
     public
     String trainer;
@@ -30,9 +34,11 @@ public class Training {
     @NotNull
     public
     String mail;
+    @JsonManagedReference
+    @OneToMany(mappedBy = "training", cascade = CascadeType.ALL)
+    public List<Comment> comments;
 
-    @OneToMany(mappedBy="training")
-    List<Comment> comments;
+
 
     public Training( String trainer, String location, String workout, String mail){
         this.trainer = trainer;
@@ -40,6 +46,7 @@ public class Training {
         this.workout = workout;
         this.mail = mail;
     }
+
 
     Training(){
 
