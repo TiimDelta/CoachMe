@@ -1,10 +1,17 @@
+import {inject} from 'aurelia-framework';
+import {FetchConfig} from 'aurelia-auth';
+
+@inject(FetchConfig)
 export class App {
-  constructor() {
-    this.message = 'Hello World!';
+
+  constructor(fetchConfig) {
+    this.fetchConfig = fetchConfig;
   }
+
   configureRouter(config, router) {
     this.router = router;
-    config.title = 'My Aurelia app';
+    this.fetchConfig.configure();
+    config.title = 'CoachMe';
     config.map([
       { route: ['', 'home'],       name: 'home',       moduleId: 'home/index' },
       { route: 'coach',       name: 'coach',       moduleId: 'resources/coach', nav:true }
