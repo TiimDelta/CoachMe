@@ -19,6 +19,16 @@ public class UserService {
 
     List<User> getAllUsers() { return userRepository.findAll(); }
 
+    public User getOrCreateUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElseGet(() -> this.addUserByEmail(email));
+       }
+
+     private User addUserByEmail(String email) {
+       User user = new User();
+        user.setEmail(email);
+        return this.addUser(user);
+    }
+
     public Optional<User> getUser(Long user) {
         return userRepository.findById(user);
     }
