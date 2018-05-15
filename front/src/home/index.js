@@ -1,12 +1,9 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
 import environment from '../environment'
-import {AuthService} from 'aurelia-auth';
-import {inject} from 'aurelia-framework';
-
-@inject(AuthService)
 
 export class Home{
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +46,8 @@ export class Home{
 >>>>>>> parent of b15c035... Revert "Revert "Auth vol 3""
 =======
 >>>>>>> parent of 7ef3523... Auth vol 2
+=======
+>>>>>>> parent of 3f050ca... Autentimine
   trainingData ={ "id" : "",
     "trainer" : "",
     "location":"",
