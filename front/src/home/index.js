@@ -1,21 +1,24 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
-import environment from '../environment'
+import environment from '../environment';
+import {AuthService} from 'aurelia-auth';
+import {inject} from 'aurelia-framework';
 
+@inject(HttpClient, AuthService)
 export class Home{
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  constructor(auth){
+  constructor(http: HttpClient, auth: AuthService){
     this.auth = auth;
-<<<<<<< HEAD
     this.message = "Just checking... ";
     if (auth.isAuthenticated()) {
-      this.message += "logitud!";
+      auth.getMe().then(
+        user => this.message += user['email'] + " on sisse logitud!"
+      )
     } else {
-      this.message += "logimata!";
+      this.message += "logimata!"
     }
+    this.appName = "coachMe";
+    this.count = 0;
+    this.http = http;
   };
 
   authenticate(provider){
@@ -24,30 +27,7 @@ export class Home{
         console.log("auth response " + response);
       });
   }
-}
-=======
-=======
-  constructor(auth){
-    this.auth = auth;
->>>>>>> parent of 7ef3523... Auth vol 2
-    this.message = "Just checking..."
-  };
 
-    authenticate(provider){
-    return this.auth.authenticate(provider).then((response)=>{
-      console.log("auth response " + response);
-     });
-    }
-<<<<<<< HEAD
->>>>>>> parent of 7ef3523... Auth vol 2
-=======
->>>>>>> parent of 3f050ca... Autentimine
-=======
->>>>>>> parent of b15c035... Revert "Revert "Auth vol 3""
-=======
->>>>>>> parent of 7ef3523... Auth vol 2
-=======
->>>>>>> parent of 3f050ca... Autentimine
   trainingData ={ "id" : "",
     "trainer" : "",
     "location":"",
@@ -71,15 +51,14 @@ export class Home{
 
 
   activate(){
-    let client = new HttpClient();
     if (this.searchInput != "") {
-      client.fetch(environment.url + 'trainings/'+this.searchInput)
+      this.http.fetch(environment.url + 'trainings/'+this.searchInput)
         .then(response => response.json())
         .then(trainings => this.trainingList = trainings);
       console.log("OOOO keegi otsib")
     }
     else {
-      client.fetch(environment.url + 'trainings')
+      this.http.fetch(environment.url + 'trainings')
         .then(response => response.json())
         .then(trainings => this.trainingList = trainings);
 
@@ -90,9 +69,8 @@ export class Home{
   }
   addTraining(){
     this.activate();
-    let client = new HttpClient();
 
-    client.fetch(environment.url + 'trainings/add', {
+    this.http.fetch(environment.url + 'trainings/add', {
       'method': "POST",
       'body': json(this.trainingData)
     })
@@ -105,9 +83,8 @@ export class Home{
   }
   addUser(){
     this.activate();
-    let client = new HttpClient();
 
-    client.fetch(environment.url + 'users/add', {
+    this.http.fetch(environment.url + 'users/add', {
       'method': "POST",
       'body': json(this.userData)
     })

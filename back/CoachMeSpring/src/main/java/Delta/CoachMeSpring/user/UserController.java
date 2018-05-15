@@ -1,9 +1,15 @@
 package Delta.CoachMeSpring.user;
 
-import org.springframework.web.bind.annotation.*;
-
+import java.security.Principal;
 import java.util.List;
-import java.util.Optional;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import Delta.CoachMeSpring.auth.AuthenticationData;
 
 @RestController
 public class UserController {
@@ -14,20 +20,33 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "/users/add", method = RequestMethod.POST,
+    @RequestMapping(value="/users/add", method=RequestMethod.POST,
             consumes = "application/json")
     public User addUser(@RequestBody User user) {
         return userService.addUser(user);
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    @RequestMapping(value="/users", method=RequestMethod.GET)
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
-    @RequestMapping(value = "/users/{userID}", method = RequestMethod.GET)
-    public Optional<User> getUser(@PathVariable("userID") Long user) {
-        return userService.getUser(user);
+    @RequestMapping(value = "/users/{id}", method=RequestMethod.GET)
+    public User getUser(@PathVariable("id") long userId) {
+        return userService.getUserById(userId);
+    }
+
+    @RequestMapping(value = "/users/search/{searchStr}", method=RequestMethod.GET)
+    public List<User> searchUsers(@PathVariable("searchStr") String searchStr) {
+        return userService.searchUsersByLastName(searchStr);
+    }
+
+    @RequestMapping(value = "/auth/me", method = RequestMethod.GET)
+    public User getLoggedUser(Principal principal) {
+        AuthenticationData auth = (AuthenticationData) principal;
+        User user = (User) auth.getPrincipal();
+
+        return user;
     }
 
 }

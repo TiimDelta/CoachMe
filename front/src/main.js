@@ -1,9 +1,20 @@
 import environment from './environment';
+import config from './authConfig';
+
+Promise.config({
+  longStackTraces: environment.debug,
+  warnings: {
+    wForgottenReturn: false
+  }
+});
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature('resources');
+    .feature('resources')
+    .plugin('aurelia-auth', (baseConfig)=>{
+      baseConfig.configure(config);
+    });
 
   if (environment.debug) {
     aurelia.use.developmentLogging();
