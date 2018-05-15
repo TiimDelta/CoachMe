@@ -34,13 +34,7 @@ export class Home{
     "workout":"",
     "mail":""
   }
-  userData ={     "username" : "",
-    "firstName" : "",
-    "lastname":"",
-    "password":"",
-    "mail":"",
-    "userType":"false"
-  }
+  userData ={}
   commentData ={
     "text":"",
     "training": {"id":""}
