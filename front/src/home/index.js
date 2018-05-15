@@ -9,6 +9,7 @@ export class Home{
 
   constructor(auth){
     this.auth = auth;
+<<<<<<< HEAD
     this.message = "Just checking... ";
     if (auth.isAuthenticated()) {
       this.message += "logitud!";
@@ -24,6 +25,16 @@ export class Home{
       });
   }
 }
+=======
+    this.message = "Just checking..."
+  };
+
+    authenticate(provider){
+    return this.auth.authenticate(provider).then((response)=>{
+      console.log("auth response " + response);
+     });
+    }
+>>>>>>> parent of 7ef3523... Auth vol 2
   trainingData ={ "id" : "",
     "trainer" : "",
     "location":"",
