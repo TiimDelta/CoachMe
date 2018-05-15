@@ -4,6 +4,7 @@ import environment from '../environment'
 export class Home{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   constructor(auth){
     this.auth = auth;
 <<<<<<< HEAD
@@ -34,22 +35,20 @@ export class Home{
 >>>>>>> parent of 7ef3523... Auth vol 2
 =======
 >>>>>>> parent of 3f050ca... Autentimine
+=======
+>>>>>>> parent of b15c035... Revert "Revert "Auth vol 3""
   trainingData ={ "id" : "",
-    "trainer" : "",
-    "location":"",
-    "workout":"",
-    "mail":""
+				  "trainer" : "",
+                  "location":"",
+                  "workout":"",
+                  "mail":""
   }
   userData ={     "username" : "",
-    "firstName" : "",
-    "lastname":"",
-    "password":"",
-    "mail":"",
-    "userType":"false"
-  }
-  commentData ={
-    "text":"",
-    "training": {"id":""}
+                  "firstName" : "",
+                  "lastname":"",
+                  "password":"",
+                  "mail":"",
+                  "userType":"false"
   }
   trainingList =[]
   searchInput="";
@@ -58,11 +57,12 @@ export class Home{
 
   activate(){
     let client = new HttpClient();
+
     if (this.searchInput != "") {
       client.fetch(environment.url + 'trainings/'+this.searchInput)
         .then(response => response.json())
         .then(trainings => this.trainingList = trainings);
-      console.log("OOOO keegi otsib")
+        console.log("OOOO keegi otsib")
     }
     else {
       client.fetch(environment.url + 'trainings')
@@ -70,11 +70,10 @@ export class Home{
         .then(trainings => this.trainingList = trainings);
 
       console.log("Get Method executed!")
-
     }
 
   }
-  addTraining(){
+	addTraining(){
     this.activate();
     let client = new HttpClient();
 
@@ -118,21 +117,5 @@ export class Home{
   }
   closePopup(popupId){
     document.getElementById(popupId.toString()).style.display='none';
-  }
-  addComment(training_id){
-    this.activate();
-
-    this.commentData.training.id = training_id;
-    let client = new HttpClient();
-    client.fetch(environment.url + 'comments/add', {
-      'method': "POST",
-      'body': json(this.commentData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log("Server saatis " + data.text);
-      });
-
-    console.log("Method executed!");
   }
 }

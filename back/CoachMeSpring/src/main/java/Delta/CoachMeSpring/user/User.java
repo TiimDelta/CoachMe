@@ -8,7 +8,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
-import javax.persistence.Column;
 import java.util.List;
 
 
@@ -17,8 +16,6 @@ import java.util.List;
 @Setter
 @Table(name = "users")
 public class User {
-    @Column(unique=true)
-    String email;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
@@ -35,6 +32,9 @@ public class User {
     @NotNull
     public
     String password;
+    @NotNull
+    public
+    String mail;
     @NotNull
     public
     Boolean userType;
@@ -54,6 +54,7 @@ public class User {
         this.firstName = firstname;
         this.lastName = lastname;
         this.password = password;
+        this.mail = mail;
         this.userType = userType;
     }
 
