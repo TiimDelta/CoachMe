@@ -1,45 +1,20 @@
 import {HttpClient, json} from 'aurelia-fetch-client'
 import environment from '../environment'
-import {AuthService} from 'aurelia-auth';
-import {inject} from 'aurelia-framework';
-
-@inject(AuthService)
 
 export class Home{
 
-  constructor(auth){
-    this.auth = auth;
-    this.message = "Just checking... ";
-    if (auth.isAuthenticated()) {
-      this.message += "logitud!";
-    } else {
-      this.message += "logimata!";
-    }
-  };
-
-  authenticate(provider){
-    return this.auth.authenticate(provider)
-      .then((response)=>{
-        console.log("auth response " + response);
-      });
-  }
-}
   trainingData ={ "id" : "",
-    "trainer" : "",
-    "location":"",
-    "workout":"",
-    "mail":""
+				  "trainer" : "",
+                  "location":"",
+                  "workout":"",
+                  "mail":""
   }
   userData ={     "username" : "",
-    "firstName" : "",
-    "lastname":"",
-    "password":"",
-    "mail":"",
-    "userType":"false"
-  }
-  commentData ={
-    "text":"",
-    "training": {"id":""}
+                  "firstName" : "",
+                  "lastname":"",
+                  "password":"",
+                  "mail":"",
+                  "userType":"false"
   }
   trainingList =[]
   searchInput="";
@@ -48,11 +23,12 @@ export class Home{
 
   activate(){
     let client = new HttpClient();
+
     if (this.searchInput != "") {
       client.fetch(environment.url + 'trainings/'+this.searchInput)
         .then(response => response.json())
         .then(trainings => this.trainingList = trainings);
-      console.log("OOOO keegi otsib")
+        console.log("OOOO keegi otsib")
     }
     else {
       client.fetch(environment.url + 'trainings')
@@ -60,11 +36,10 @@ export class Home{
         .then(trainings => this.trainingList = trainings);
 
       console.log("Get Method executed!")
-
     }
 
   }
-  addTraining(){
+	addTraining(){
     this.activate();
     let client = new HttpClient();
 
@@ -108,21 +83,5 @@ export class Home{
   }
   closePopup(popupId){
     document.getElementById(popupId.toString()).style.display='none';
-  }
-  addComment(training_id){
-    this.activate();
-
-    this.commentData.training.id = training_id;
-    let client = new HttpClient();
-    client.fetch(environment.url + 'comments/add', {
-      'method': "POST",
-      'body': json(this.commentData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log("Server saatis " + data.text);
-      });
-
-    console.log("Method executed!");
   }
 }
