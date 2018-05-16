@@ -20,24 +20,19 @@ export class Home{
   };
 
   authenticate(provider){
-
+    this.activate();
 
     return this.auth.authenticate(provider)
       .then((response)=>{
         console.log("auth response " + response);
-        document.getElementById("addprofile").style.display='block';
-        document.getElementById("addcomment").style.display='block';
-        document.getElementById("logout").style.display='block';
-        document.getElementById("login").style.display='none';
+        location.reload(1);
       });
   }
   logout(){
+    this.activate();
     this.auth.logout();
     this.http = new HttpClient();
-    document.getElementById("addprofile").style.display='none';
-    document.getElementById("addcomment").style.display='none';
-    document.getElementById("logout").style.display='none';
-    document.getElementById("login").style.display='block';
+    location.reload(1);
 
   }
 
@@ -121,11 +116,9 @@ export class Home{
   }
   addComment(training_id){
     this.activate();
-
     this.commentData.training.id = training_id;
     this.commentData.mail = this.message;
-    let client = new HttpClient();
-    client.fetch(environment.url + 'comments/add', {
+    this.http.fetch(environment.url + 'comments/add', {
       'method': "POST",
       'body': json(this.commentData)
     })
@@ -133,7 +126,7 @@ export class Home{
       .then(data => {
         console.log("Server saatis " + data.text);
       });
-
+    location.reload(1);
     console.log("Method executed!");
   }
 }

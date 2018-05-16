@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>CoachMe</title>
 
     <!-- Bootstrap core CSS -->
@@ -24,7 +23,7 @@
     <a class="navbar-brand" href="index.html">CoachMe</a>
     <div class="collapse navbar-collapse imp">
       <ul class="navbar-nav mr-auto col-sm-8">
-        <li>olete sisse logitud kontoga : ${message}</li>
+        <li if.bind="auth.isAuthenticated()">olete sisse logitud kontoga : ${message}</li>
         <!--
         <li class="nav-item">
           <a class="nav-link" href="/#/coach">Treenerid</a>
@@ -38,10 +37,10 @@
         </li>
       </ul>
       <div class="form-inline my-2 my-lg-0">
-        <button id="login" class="btn btn-primary ml-15 my-2 my-sm-0" click.delegate="authenticate('google')">
+        <button id="login" class="btn btn-primary ml-15 my-2 my-sm-0" if.bind="!auth.isAuthenticated()" click.delegate="authenticate('google')">
           <span class="ion-social-googleplus"></span>Logi sisse
         </button>
-        <button id="logout" class="btn btn-primary ml-15 my-2 my-sm-0" click.delegate="logout('google')">
+        <button id="logout" class="btn btn-primary ml-15 my-2 my-sm-0" show.bind="auth.isAuthenticated()" click.delegate="logout()">
           <span class="ion-social-googleplus"></span>Logi välja
         </button>
        <!-- <button class="btn btn-primary ml-15 my-2 my-sm-0" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Logi sisse</button>
@@ -95,7 +94,7 @@
           </form>
         </div>
         -->
-        <button id="addprofile" class="btn btn-primary" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
+        <button id="addprofile" class="btn btn-primary" if.bind="auth.isAuthenticated()" onclick="document.getElementById('profile').style.display='block'" style="width:auto;">Lisa profiil</button>
         <div id="profile" class="modal">
           <form id="trainingForm" submit.delegate="addTraining()" class="form-horizontal register-modal-content animate" onsubmit="window.location.reload();">
             <div class="imgcontainer">
@@ -180,7 +179,7 @@
                     <p>${comments.text}</p>
 
                   </div>
-                  <div id="addcomment">
+                  <div if.bind="auth.isAuthenticated()">
                   <label><b>Lisa kommentaar</b></label>
                   <input id=="commentpost${trainings.id}" type="text" placeholder="sisesta kommentaar" name="comment" value.bind="commentData.text" required>
                   <button class="btn btn-primary my-2 my-sm-0" click.delegate="addComment(trainings.id)" style="width:auto;">Lisa</button>
