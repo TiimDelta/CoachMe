@@ -30,7 +30,6 @@ public class User implements UserDetails{
     private long id;
     private String firstName;
     private String lastName;
-    private int numOfPets;
     @Column(unique=true)
     private String email;
 

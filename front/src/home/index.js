@@ -20,10 +20,25 @@ export class Home{
   };
 
   authenticate(provider){
+
+
     return this.auth.authenticate(provider)
       .then((response)=>{
         console.log("auth response " + response);
+        document.getElementById("addprofile").style.display='block';
+        document.getElementById("addcomment").style.display='block';
+        document.getElementById("logout").style.display='block';
+        document.getElementById("login").style.display='none';
       });
+  }
+  logout(){
+    this.auth.logout();
+    this.http = new HttpClient();
+    document.getElementById("addprofile").style.display='none';
+    document.getElementById("addcomment").style.display='none';
+    document.getElementById("logout").style.display='none';
+    document.getElementById("login").style.display='block';
+
   }
 
   trainingData ={ "id" : "",
