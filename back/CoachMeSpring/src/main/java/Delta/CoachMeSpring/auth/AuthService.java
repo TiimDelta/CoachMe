@@ -38,7 +38,7 @@ public class AuthService {
     private static final String GOOGLE_API_URL = "https://www.googleapis.com/oauth2/v4/token";
 
     // do not add google api json data to repository! security risk!
-    final String CLIENT_SECRET_FILE = "C:/Users/karlo/Downloads/google-secret.json";
+    final String CLIENT_SECRET_FILE = "C:/Users/Alien/Downloads/google-secret.json";
 
     public AuthResponse authenticate(AuthRequest request) throws IllegalAccessError, GeneralSecurityException, IOException {
 

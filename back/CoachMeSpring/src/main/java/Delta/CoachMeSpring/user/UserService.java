@@ -24,7 +24,7 @@ public class UserService {
     }
 
     public User getUserById(long userId) {
-        return userRepository.getOne(userId);
+        return userRepository.findOne(userId);
     }
 
     public User getCopyOfUserById(long userId) {

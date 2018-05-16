@@ -13,7 +13,7 @@ import Delta.CoachMeSpring.auth.TokenService;
 import Delta.CoachMeSpring.user.UserService;
 
 @Configuration
-@Order(SecurityProperties.DEFAULT_FILTER_ORDER)
+@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private TokenService tokenService;
