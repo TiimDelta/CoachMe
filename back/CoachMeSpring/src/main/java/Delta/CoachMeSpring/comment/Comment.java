@@ -29,10 +29,11 @@ public class Comment {
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "time")
-    private Date timePosted = new Date();
+    public Date timePosted = new Date();
     @JsonBackReference
     @ManyToOne()
     public Training training;
+    public String mail;
 
     public Comment( String text){
         this.text = text;

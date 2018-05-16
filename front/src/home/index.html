@@ -24,7 +24,7 @@
     <a class="navbar-brand" href="index.html">CoachMe</a>
     <div class="collapse navbar-collapse imp">
       <ul class="navbar-nav mr-auto col-sm-8">
-        <li>Hei! ${appName} kasutajaid on praegu ${count} ${message}</li>
+        <li>olete sisse logitud kontoga : ${message}</li>
         <!--
         <li class="nav-item">
           <a class="nav-link" href="/#/coach">Treenerid</a>
@@ -111,8 +111,6 @@
               <label><b>Trenni tüüp</b></label>
               <input id=="workout" type="text" placeholder="Sisesta treeningu tüüp" name="trennityyp" value.bind="trainingData.workout" required>
 
-              <label><b>E-mail</b></label>
-              <input id=="mail" type="email" placeholder="sisesta email" name="email" value.bind="trainingData.mail" required>
 
               <button class="btn btn-primary" type="submit">Lisa</button>
             </div>
@@ -174,7 +172,9 @@
                   <p class="font-weight-light mb-0">E-mail: ${trainings.mail}</p>
                   <p class="comments"><b>Kommentaarid:</b></p>
                   <div class="commentbox" repeat.for="comments of trainings.comments">
+                    <p>${comments.mail}</p>
                     <p>${comments.text}</p>
+
                   </div>
                   <label><b>Lisa kommentaar</b></label>
                   <input id=="commentpost${trainings.id}" type="text" placeholder="sisesta kommentaar" name="comment" value.bind="commentData.text" required>

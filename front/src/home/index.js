@@ -8,13 +8,11 @@ export class Home{
 
   constructor(http: HttpClient, auth: AuthService){
     this.auth = auth;
-    this.message = "Just checking... ";
     if (auth.isAuthenticated()) {
       auth.getMe().then(
-        user => this.message += user['email'] + " on sisse logitud!"
+        user => this.message = user['email']
       )
     } else {
-      this.message += "logimata!"
     }
     this.appName = "coachMe";
     this.count = 0;
@@ -37,7 +35,8 @@ export class Home{
   userData ={}
   commentData ={
     "text":"",
-    "training": {"id":""}
+    "training": {"id":""},
+    "mail":""
   }
   trainingList =[]
   searchInput="";
@@ -64,6 +63,7 @@ export class Home{
   addTraining(){
     this.activate();
 
+    this.trainingData.mail = this.message;
     this.http.fetch(environment.url + 'trainings/add', {
       'method': "POST",
       'body': json(this.trainingData)
@@ -108,6 +108,7 @@ export class Home{
     this.activate();
 
     this.commentData.training.id = training_id;
+    this.commentData.mail = this.message;
     let client = new HttpClient();
     client.fetch(environment.url + 'comments/add', {
       'method': "POST",
